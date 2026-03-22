@@ -5,6 +5,7 @@ export const cormorant = Cormorant_Garamond({
   weight: ['300', '400', '600'],
   style: ['normal', 'italic'],
   variable: '--font-cormorant',
+  display: 'swap',
 })
 
 export const ebGaramond = EB_Garamond({
@@ -12,10 +13,12 @@ export const ebGaramond = EB_Garamond({
   weight: ['400', '500'],
   style: ['normal', 'italic'],
   variable: '--font-eb-garamond',
+  display: 'swap',
 })
 
 export const raleway = Raleway({
   subsets: ['latin'],
   weight: ['200', '300', '400'],
   variable: '--font-raleway',
+  display: 'swap',
 })
