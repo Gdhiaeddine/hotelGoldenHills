@@ -4,6 +4,7 @@ import HotelFeatures from "../components/HotelFeatures";
 import Accommodation from "../components/Accommodation";
 import WellnessSpa from "../components/WellnessSpa";
 import Gastronomy from "../components/Gastronomy";
+import EventsHome from "@/components/EventsHome";
 
 export default function Home() {
   const title = "Golden Hills"
@@ -22,6 +23,7 @@ export default function Home() {
       <Accommodation />
       <WellnessSpa />
       <Gastronomy />
+      <EventsHome />
     </div >
   );
 }

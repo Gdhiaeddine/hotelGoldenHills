@@ -16,11 +16,11 @@ import BookingInformation from '@/components/BookingInformation'
 const page = () => {
     const title = "Cotnact"
     const description = "Would you like to find our how to get to us or you have a question you need to ask? Call us or e-mail us, here are all the contact information you need to know."
-
+    const HeroSectionImage = "/assets/HotelReception2.jpg"
     
     return (
         <div>
-            <HeroSection title={title} description={description} />
+            <HeroSection title={title} description={description} HeroSectionImage={HeroSectionImage}/>
             <div className='h-[70vh] flex justify-center items-center'>
                 <div className='max-w-full flex items-center gap-10'>
                     <div className='flex flex-col items-center gap-6 text-center'>
@@ -37,10 +37,10 @@ const page = () => {
                     </div>
                     <div>
                         <Image
-                            src='/RoomPresentation.png'
+                            src='/assets/hotelOutsideNew.jpg'
                             height={500}
                             width={500}
-                            alt='Room'
+                            alt='hotel Golden Hills'
                         />
                     </div>
                 </div>

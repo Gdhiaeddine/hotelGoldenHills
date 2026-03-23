@@ -9,7 +9,7 @@ const Accommodation = () => {
 
 
     return (
-        <div className="min-h-screen flex flex-col items-center justify-center gap-6 mx-auto max-w-11/12">
+        <div className="min-h-screen flex flex-col items-center justify-center gap-10 mx-auto max-w-11/12">
 
             {/* Two panels side by side */}
             <div className="flex gap-4 w-full">

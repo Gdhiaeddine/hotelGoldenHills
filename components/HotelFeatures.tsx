@@ -5,7 +5,7 @@ import { raleway } from '../app/font'
 import { useCallback, useEffect, useRef, useState } from 'react'
 
 const images = [
-    '/RoomPresentation.png',
+    
     '/assets/hotelOutside.jpg',
     '/assets/RoomFloor.webp',
 ]

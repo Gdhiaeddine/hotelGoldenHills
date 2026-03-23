@@ -123,6 +123,10 @@ export default function HeroSection({ title, subTitle, description, isForm, type
             url: "/gastro",
         },
         {
+            name: "Events",
+            url: "/events",
+        },
+        {
             name: "Contact",
             url: "/contact",
         },

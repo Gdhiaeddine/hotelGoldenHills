@@ -1,8 +1,7 @@
 import HeroSection from '@/components/HeroSection'
 import Image from 'next/image'
-import React from 'react'
 import { cormorant, ebGaramond, raleway } from '../font'
-import { Button } from '@/components/ui/button'
+import PrimaryButton from '@/components/PrimaryButton'
 
 const page = () => {
     const subTitle = 'Golden Hills Hotel & Spa'
@@ -16,7 +15,47 @@ const page = () => {
         'In the heart of Slovakia',
         'Congress center',
     ]
+    const featuresImage = [
+        {
+            path: '/assets/HotelReception1.jpg',
+            alt: 'Hotel Reception Golden Hills',
+        },
+        {
+            path: '/assets/HotelReception2.jpg',
+            alt: 'Hotel Reception 2 Golden Hills',
+        },
+    ]
 
+    const servicesCard = [
+        {
+            image: '/assets/events/meetingRoom2.jpg',
+            title: 'Spa',
+            subTitle: 'An oasis of peace and relaxation',
+            buttonContent: 'Wellness',
+            ButtonDestination: '#'
+        },
+        {
+            image: '/assets/rooms/ServiceImage.jpg',
+            title: 'Rooms',
+            subTitle: 'Comfortable accommodation',
+            buttonContent: 'Rooms',
+            ButtonDestination: '#'
+        },
+        {
+            image: '/assets/events/meetingRoom2.jpg',
+            title: 'Events',
+            subTitle: 'Combining work with and celebrations',
+            buttonContent: 'Events',
+            ButtonDestination: '#'
+        },
+        {
+            image: '/assets/events/meetingRoom2.jpg',
+            title: 'Gastro',
+            subTitle: 'An exceptional gastronomic experience',
+            buttonContent: 'Gastro',
+            ButtonDestination: '#'
+        },
+    ]
     const type = "aboutUs"
     const HeroSectionImage = '/assets/hotelOutside.jpg'
     return (
@@ -54,10 +93,10 @@ const page = () => {
                     {/* Items list — sticks while images scroll */}
                     <div className="flex-1 sticky top-0 h-screen flex flex-col justify-center text-center">
 
-                        <div className="py-7 ">
+                        <div className="py-7 flex flex-col gap-2">
                             {
                                 features.map((feature, index) => (
-                                    <p key={index}>
+                                    <p key={index} className={`${cormorant.className} text-xl font-medium`}>
                                         {feature}
                                     </p>
                                 ))
@@ -66,22 +105,21 @@ const page = () => {
                     </div>
                     {/* Images — scrolls normally */}
                     <div className="flex-1 flex flex-col gap-4">
-                        <Image
-                            src='/RoomPresentation.png'
-                            width={300}
-                            height={400}
-                            alt="gastro"
-                            className="w-full object-cover"
-                            style={{ aspectRatio: '4/5' }}
-                        />
-                        <Image
-                            src='/RoomPresentation.png'
-                            width={500}
-                            height={600}
-                            alt="gastro"
-                            className="w-full object-cover"
-                            style={{ aspectRatio: '4/5' }}
-                        />
+                        {
+                            featuresImage.map((featureImage, index) => (
+                                <div className="relative w-full" style={{ aspectRatio: '4/5' }}
+                                    key={index}
+                                >
+                                    <Image
+                                        src={featureImage.path}
+                                        fill
+                                        alt={featureImage.alt}
+                                        className="object-cover"
+                                        style={{ aspectRatio: '4/5' }}
+                                    />
+                                </div>
+                            ))
+                        }
                     </div>
                 </div>
             </div>
@@ -102,7 +140,7 @@ const page = () => {
                 <div
                     className="relative h-[80vh] w-full"
                     style={{
-                        backgroundImage: "url('/RoomPresentation.png')",
+                        backgroundImage: "url('/assets/HotelOutsideNew.jpg')",
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                         backgroundRepeat: 'no-repeat',
@@ -114,7 +152,7 @@ const page = () => {
                 <h1 className={`${cormorant.className} font-semibold max-w-1/2 text-4xl`}>
                     We care very much about making you feel comfortable with us, so feedback on our services is very important to us. Thanks to the satisfaction of our guests, the hotel grows and modernizes every year.
                 </h1>
-                <p className={`${cormorant.className} font-semibold max-w-1/2 text-2xl`}>
+                <p className={`${raleway.className} font-medium max-w-1/2 text-2xl`}>
                     If our services do not meet your expectations, please contact us, we will do everything to resolve your requirements. Therefore, do not hesitate to contact our staff, who are here for you. We are grateful for our team of employees who have been with us for 15 years and together share our sense of hospitality.
                 </p>
             </div>
@@ -145,90 +183,27 @@ const page = () => {
             </div>
             <div className="flex justify-center items-center mb-4">
                 <div className='grid grid-cols-2 gap-8'>
-                    <div
-                        className="relative h-180 w-140"
-                        style={{
-                            backgroundImage: "url('/RoomPresentation.png')",
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            backgroundRepeat: 'no-repeat',
-                            aspectRatio: '4/5',
-
-                        }}
-                    >
-                        <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-                            <div className={`p-2 flex flex-col gap-10 text-white items-center justify-between text-center font-medium text-lg`}>
-                                <h2 className={`${raleway.className} font-semibold`}>SPA</h2>
-                                <h1 className={`${cormorant.className} text-2xl font-semibold`}>An oasis of peace and relaxation</h1>
-                                <div className='bg-white/50 w-max px-4 py-2 rounded-full'>
-                                    Wellness
+                    {
+                        servicesCard.map((service, index) => (
+                            <div key={index} className="relative h-180 w-140 overflow-hidden">
+                                <Image
+                                    src={service.image}
+                                    alt={service.title}
+                                    fill
+                                    className="object-cover object-center"
+                                />
+                                <div className="absolute inset-0 flex items-center justify-center bg-black/30">
+                                    <div className="p-2 flex flex-col gap-10 text-white items-center justify-between text-center font-medium text-lg">
+                                        <h2 className={`${raleway.className} font-semibold`}>{service.title}</h2>
+                                        <h1 className={`${cormorant.className} text-2xl font-semibold`}>{service.subTitle}</h1>
+                                        <PrimaryButton content={service.buttonContent} destination={service.ButtonDestination} />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div
-                        className="relative h-180 w-140"
-                        style={{
-                            backgroundImage: "url('/RoomPresentation.png')",
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            backgroundRepeat: 'no-repeat',
-                            aspectRatio: '4/5',
 
-                        }}
-                    >
-                        <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-                            <div className={`p-2 flex flex-col gap-10 text-white items-center justify-between text-center font-medium text-lg`}>
-                                <h2 className={`${raleway.className} font-semibold`}>SPA</h2>
-                                <h1 className={`${cormorant.className} text-2xl font-semibold`}>An oasis of peace and relaxation</h1>
-                                <div className='bg-white/50 w-max px-4 py-2 rounded-full'>
-                                    Wellness
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        className="relative h-180 w-140"
-                        style={{
-                            backgroundImage: "url('/RoomPresentation.png')",
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            backgroundRepeat: 'no-repeat',
-                            aspectRatio: '4/5',
+                        ))
 
-                        }}
-                    >
-                        <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-                            <div className={`p-2 flex flex-col gap-10 text-white items-center justify-between text-center font-medium text-lg`}>
-                                <h2 className={`${raleway.className} font-semibold`}>SPA</h2>
-                                <h1 className={`${cormorant.className} text-2xl font-semibold`}>An oasis of peace and relaxation</h1>
-                                <div className='bg-white/50 w-max px-4 py-2 rounded-full'>
-                                    Wellness
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div
-                        className="relative h-180 w-140"
-                        style={{
-                            backgroundImage: "url('/RoomPresentation.png')",
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            backgroundRepeat: 'no-repeat',
-                            aspectRatio: '4/5',
-
-                        }}
-                    >
-                        <div className="absolute inset-0 flex items-center justify-center bg-black/30">
-                            <div className={`p-2 flex flex-col gap-10 text-white items-center justify-between text-center font-medium text-lg`}>
-                                <h2 className={`${raleway.className} font-semibold`}>SPA</h2>
-                                <h1 className={`${cormorant.className} text-2xl font-semibold`}>An oasis of peace and relaxation</h1>
-                                <div className='bg-white/50 w-max px-4 py-2 rounded-full'>
-                                    Wellness
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    }
                 </div>
             </div>
 
