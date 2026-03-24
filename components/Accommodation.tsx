@@ -12,7 +12,7 @@ const Accommodation = () => {
         <div className="min-h-screen flex flex-col items-center justify-center gap-10 mx-auto max-w-11/12">
 
             {/* Two panels side by side */}
-            <div className="flex gap-4 w-full">
+            <div className="flex flex-col gap-4 w-full lg:flex-row">
                 <div className="relative h-[80vh] w-full overflow-hidden">
                     <Image
                         src={roomImage}

@@ -1,7 +1,8 @@
 'use client'
 import { cormorant, raleway } from '@/app/font'
 import { ChevronDown } from 'lucide-react'
-import React, { useState } from 'react'
+import Image from 'next/image'
+import { useState } from 'react'
 
 const RoomTrigger = () => {
     const [openIndex, setOpenIndex] = useState<number | null>(null)
@@ -9,10 +10,14 @@ const RoomTrigger = () => {
         setOpenIndex(openIndex === index ? null : index)
     }
     return (
-        <div
-            className="min-h-screen relative flex flex-col justify-center items-center"
-            style={{ backgroundImage: "url('/RoomPresentation.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}
-        >
+        <div className="min-h-screen relative flex flex-col justify-center items-center">
+            <Image
+                src="/RoomPresentation.png"
+                alt="Room Presentation"
+                fill
+                className="object-cover object-center"
+                priority
+            />
             <div className="absolute inset-0 bg-black/30" />
 
             <div className='w-full max-w-xl z-10 flex flex-col gap-2 px-4'>
@@ -87,6 +92,7 @@ const RoomTrigger = () => {
 
             </div>
         </div>
+
     )
 }
 

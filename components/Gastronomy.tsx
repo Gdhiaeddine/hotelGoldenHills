@@ -37,7 +37,7 @@ const Gastronomy = () => {
             <h1 className={`${ebGaramond.className} text-6xl mt-4 text-center px-12`}>
                 Exceptional gastronomy in beautiful spaces
             </h1>
-            <div className="w-full max-w-3/5 flex justify-between items-start gap-12 px-12 pt-16 pb-4 mx-auto">
+            <div className="w-full lg:max-w-3/5 flex flex-col justify-between items-center gap-12 px-12 pt-16 pb-4 mx-auto lg:flex-row lg:items-start">
 
                 {/* Images — scrolls normally */}
                 <div className="flex-1 flex flex-col gap-4">

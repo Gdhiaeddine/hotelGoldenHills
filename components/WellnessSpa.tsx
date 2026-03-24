@@ -2,7 +2,7 @@ import { ebGaramond, raleway } from '../app/font'
 
 const WellnessSpa = () => {
     return (
-        <div className="min-h-screen flex relative mb-10">
+        <div className="min-h-screen flex flex-col relative mb-10 lg:flex-row">
 
             {/* Panel 1 */}
             <div

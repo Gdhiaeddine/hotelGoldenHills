@@ -159,7 +159,7 @@ export default function HeroSection({ title, subTitle, description, isForm, type
                     </div>
                 </div>
 
-                <div className={`${raleway.className} uppercase NavBar flex justify-center items-center gap-10 w-full py-4 text-sm font-semibold`}>
+                <div className={`${raleway.className} uppercase NavBar md:flex justify-center items-center gap-10 w-full py-4 text-sm font-semibold hidden`}>
                     {
                         navPages.map(
                             (page, index) => (
@@ -178,14 +178,14 @@ export default function HeroSection({ title, subTitle, description, isForm, type
                 {
                     subTitle &&
                     (
-                        <h2 className={`${ebGaramond.className} text-amber-400 tracking-widest uppercase text-2xl font-medium`}>
+                        <h2 className={`${ebGaramond.className} text-amber-400 tracking-widest uppercase text-xl lg:text-2xl font-medium`}>
                             {subTitle}
                         </h2>
                     )
                 }
                 {
                     title && (
-                        <h1 className={`${cormorant.className}  ${type === "aboutUs" ? "text-6xl" : "text-8xl"} max-w-2/3 tracking-wide font-bold capitalize ${type === "home" ? "text-amber-300" : "text-white"}`}
+                        <h1 className={`${cormorant.className}  ${type === "aboutUs" ? "text-6xl" : "md:text-8xl text-6xl"} lg:max-w-2/3 tracking-wide font-bold capitalize ${type === "home" ? "text-amber-300" : "text-white"}`}
                             ref={h1Ref}
                         >
                             {title}
@@ -194,7 +194,7 @@ export default function HeroSection({ title, subTitle, description, isForm, type
                 }
                 {
                     description && (
-                        <p className={`${raleway.className} text-white tracking-wider text-xl mt-2 mb-10 max-w-2/6`}>
+                        <p className={`${raleway.className} text-white tracking-wider text-xl mt-2 mb-10 lg:max-w-2/6`}>
                             {description}
                         </p>
                     )
@@ -206,14 +206,14 @@ export default function HeroSection({ title, subTitle, description, isForm, type
                     {
                         isForm && (
                             <div className="w-full bg-white p-6 rounded-sm">
-                                <div className="flex flex-col md:flex-row flex-wrap md:items-end gap-6 text-black">
-                                    <form onSubmit={form.handleSubmit(onStep1Submit)} className="flex flex-col md:flex-row flex-wrap md:items-end gap-6">
+                                <div className="flex flex-col lg:flex-row flex-wrap md:items-end gap-6 text-black">
+                                    <form onSubmit={form.handleSubmit(onStep1Submit)} className="flex flex-col lg:flex-row flex-wrap lg:items-end gap-6">
                                         {/* Date Picker */}
                                         <Controller
                                             name="dateRange"
                                             control={form.control}
                                             render={({ field, fieldState }) => (
-                                                <Field className="w-full md:w-64" data-invalid={fieldState.invalid}>
+                                                <Field className="w-full lg:w-64" data-invalid={fieldState.invalid}>
                                                     <FieldLabel
                                                         htmlFor="date-picker-range"
                                                         className={`${ebGaramond.className} text-md font-medium`}
@@ -266,7 +266,7 @@ export default function HeroSection({ title, subTitle, description, isForm, type
                                             name="nbPrsn"
                                             control={form.control}
                                             render={({ field, fieldState }) => (
-                                                <Field data-invalid={fieldState.invalid} className="w-full md:w-40">
+                                                <Field data-invalid={fieldState.invalid} className="w-full lg:w-40">
                                                     <FieldLabel htmlFor="form-rhf-nbPrsn" className={`${ebGaramond.className} text-md font-medium`}>
                                                         Nombre des personnes
                                                     </FieldLabel>
@@ -293,7 +293,7 @@ export default function HeroSection({ title, subTitle, description, isForm, type
                                             name="nbRooms"
                                             control={form.control}
                                             render={({ field, fieldState }) => (
-                                                <Field data-invalid={fieldState.invalid} className="w-full md:w-40">
+                                                <Field data-invalid={fieldState.invalid} className="w-full lg:w-40">
                                                     <FieldLabel htmlFor="form-rhf-nbRooms" className={`${ebGaramond.className} text-md font-medium`}>
                                                         Nombre des chambres
                                                     </FieldLabel>

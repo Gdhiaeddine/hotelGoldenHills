@@ -1,6 +1,5 @@
 import { cormorant, raleway } from '@/app/font'
 import Image from 'next/image'
-import React from 'react'
 import PrimaryButton from './PrimaryButton'
 
 const EventsHome = () => {

@@ -36,10 +36,10 @@ const Footer = () => {
 
     ]
     return (
-        <div className="flex h-screen w-full">
+        <div className="flex flex-col lg:flex-row h-screen w-full">
             {/* Left Panel - Navigation - 60% */}
             <div
-                className={`w-[60%] h-full flex justify-start items-center px-16 relative`}
+                className={`lg:w-[60%] h-full flex justify-start items-center px-16 relative`}
                 style={{
                     backgroundImage: `url(${footerImage})`,
                     backgroundSize: 'cover',
@@ -66,7 +66,7 @@ const Footer = () => {
             </div>
 
             {/* Right Panel - Info - 40% */}
-            <div className="w-[40%] h-full bg-[#111] flex flex-col text-center justify-center items-center px-12 gap-10">
+            <div className="lg:w-[40%] h-full bg-[#111] flex flex-col text-center justify-center items-center px-12 gap-10">
                 <h1 className="text-amber-400 text-4xl font-serif leading-tight">
                     <Image
                         src='/assets/logo.png'

@@ -4,7 +4,7 @@ import PrimaryButton from './PrimaryButton'
 const AboutUs = () => {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center">
-        <div className={`${ebGaramond.className} text-5xl max-w-2/4 text-center mb-8`}>
+        <div className={`${ebGaramond.className} text-5xl max-w-11/12 lg:max-w-2/4 text-center mb-8`}>
           <h1>
             The stay at Wellness & Spa Hotel Golden Hills means enjoying every moment.
           </h1>

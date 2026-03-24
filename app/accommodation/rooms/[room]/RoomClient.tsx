@@ -14,9 +14,9 @@ const RoomClient = ({ room }: { room: Room }) => {
     const HeroSectionImage = room.images[0].path
     return (
         <div className='min-h-screen'>
-            <HeroSection title={room.name} HeroSectionImage={HeroSectionImage}/>
+            <HeroSection title={room.name} HeroSectionImage={HeroSectionImage} />
             <div className='min-h-screen flex justify-center items-center'>
-                <HeaderContent subtitle={subTitle} title={title}  />
+                <HeaderContent subtitle={subTitle} title={title} />
             </div>
             <div className='flex gap-4 p-4'>
                 <div className='w-1/2'>
@@ -72,18 +72,16 @@ const RoomClient = ({ room }: { room: Room }) => {
             <div className='min-h-screen flex flex-col items-center p-4'>
                 <HeaderContent subtitle='Gallery' title={room.type} />
                 <div className='flex flex-col gap-4'>
-                    {
-                        room.images.map((image, index) => (
+                    {room.images.map((image, index) => (
+                        <div key={index} className="relative h-[70vh] w-[100vh]">
                             <Image
-                                key={index}
                                 src={image.path}
                                 alt={image.alt}
-                                width={500}
-                                height={500}
-                                className='h-[70vh] w-full'
+                                fill
+                                className='object-cover'
                             />
-                        ))
-                    }
+                        </div>
+                    ))}
                 </div>
             </div>
             <BookingInformation />

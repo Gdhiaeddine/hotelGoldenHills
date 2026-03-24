@@ -2,6 +2,8 @@ import HeroSection from '@/components/HeroSection'
 import Image from 'next/image'
 import { cormorant, ebGaramond, raleway } from '../font'
 import PrimaryButton from '@/components/PrimaryButton'
+import SecondaryButton from '@/components/SecondaryButton'
+import FooterPages from '@/components/FooterPages'
 
 const page = () => {
     const subTitle = 'Golden Hills Hotel & Spa'
@@ -61,9 +63,9 @@ const page = () => {
     return (
         <div>
             <HeroSection subTitle={subTitle} title={title} type={type} HeroSectionImage={HeroSectionImage} />
-            <div className="w-full max-w-3/5 flex justify-between items-center gap-12 px-12 pt-16 pb-4 mx-auto">
+            <div className="w-full lg:max-w-3/5 flex flex-col lg:flex-row justify-between items-center gap-12 px-12 pt-16 pb-4 mx-auto">
                 {/* Items list — sticks while images scroll */}
-                <div className="flex-1 flex justify-center items-center text-center w-2/3">
+                <div className="flex-1 flex justify-center items-center text-center w-11/12 lg:w-2/3">
                     <div className="py-7 flex flex-col gap-6">
                         <h2 className={`${ebGaramond.className} text-3xl font-normal text-stone-900 mb-2 tracking-wide`}>
                             Dear guests, we would like to welcome you in our Wellness Hotel Golden Hills.
@@ -75,7 +77,7 @@ const page = () => {
                     </div>
                 </div>
                 {/* Images — scrolls normally */}
-                <div className="flex-1 max-w-1/2">
+                <div className="w-full xl:flex-1 lg:max-w-1/2">
                     <div className="relative w-full" style={{ aspectRatio: '4/5' }}>
                         <Image
                             src='/assets/HotelReception.jpg'
@@ -87,11 +89,11 @@ const page = () => {
                 </div>
             </div>
             <div className="min-h-screen flex flex-col items-center">
-                <div className="w-full max-w-3/5 flex justify-between items-start gap-12 px-12 pt-16 pb-4 mx-auto">
+                <div className="w-full max-w-3/5 flex flex-col lg:flex-row justify-between items-start gap-12 px-12 pt-16 pb-4 mx-auto">
 
 
                     {/* Items list — sticks while images scroll */}
-                    <div className="flex-1 sticky top-0 h-screen flex flex-col justify-center text-center">
+                    <div className="w-full xl:flex-1 sticky top-0 h-screen flex flex-col justify-center text-center">
 
                         <div className="py-7 flex flex-col gap-2">
                             {
@@ -104,7 +106,7 @@ const page = () => {
                         </div>
                     </div>
                     {/* Images — scrolls normally */}
-                    <div className="flex-1 flex flex-col gap-4">
+                    <div className="w-full xl:flex-1 flex flex-col gap-4">
                         {
                             featuresImage.map((featureImage, index) => (
                                 <div className="relative w-full" style={{ aspectRatio: '4/5' }}
@@ -127,7 +129,7 @@ const page = () => {
                 <h2 className={`${raleway.className} uppercase font-semibold`}>
                     About us
                 </h2>
-                <div className={`${ebGaramond.className} text-7xl max-w-3/5 text-center mb-8`}>
+                <div className={`${ebGaramond.className} text-7xl max-w-11/12 xl:max-w-3/5 text-center mb-8`}>
                     <h1>
                         Thanks to the satisfaction of our guests, the hotel grows
                     </h1>
@@ -136,7 +138,7 @@ const page = () => {
                     </h1>
                 </div>
             </div>
-            <div className='h-screen flex items-center justify-center max-w-3/5 mx-auto'>
+            <div className='h-screen flex items-center justify-center max-w-11/12 xl:max-w-3/5 mx-auto'>
                 <div
                     className="relative h-[80vh] w-full"
                     style={{
@@ -149,14 +151,14 @@ const page = () => {
                 </div>
             </div>
             <div className='flex flex-col gap-6 items-center justify-center'>
-                <h1 className={`${cormorant.className} font-semibold max-w-1/2 text-4xl`}>
+                <h1 className={`${cormorant.className} font-semibold max-w-11/12 xl:max-w-1/2 text-4xl`}>
                     We care very much about making you feel comfortable with us, so feedback on our services is very important to us. Thanks to the satisfaction of our guests, the hotel grows and modernizes every year.
                 </h1>
-                <p className={`${raleway.className} font-medium max-w-1/2 text-2xl`}>
+                <p className={`${raleway.className} font-medium max-w-11/12 xl:max-w-1/2 text-2xl`}>
                     If our services do not meet your expectations, please contact us, we will do everything to resolve your requirements. Therefore, do not hesitate to contact our staff, who are here for you. We are grateful for our team of employees who have been with us for 15 years and together share our sense of hospitality.
                 </p>
             </div>
-            <div className='h-screen flex items-center justify-center max-w-3/5 mx-auto'>
+            <div className='h-screen flex items-center justify-center max-w-11/12 xl:max-w-3/5 mx-auto'>
                 <div
                     className="relative h-[80vh] w-full"
                     style={{
@@ -172,7 +174,7 @@ const page = () => {
                 <h2 className={`${raleway.className} uppercase font-semibold`}>
                     Services
                 </h2>
-                <div className={`${ebGaramond.className} text-7xl max-w-3/5 text-center mb-8`}>
+                <div className={`${ebGaramond.className} text-7xl max-w-11/12 xl:max-w-3/5 text-center mb-8`}>
                     <h1>
                         Our offer is mainly focused on the prevention of health and
                     </h1>
@@ -182,7 +184,7 @@ const page = () => {
                 </div>
             </div>
             <div className="flex justify-center items-center mb-4">
-                <div className='grid grid-cols-2 gap-8'>
+                <div className='flex flex-col xl:grid grid-cols-2 gap-8'>
                     {
                         servicesCard.map((service, index) => (
                             <div key={index} className="relative h-180 w-140 overflow-hidden">
@@ -196,7 +198,7 @@ const page = () => {
                                     <div className="p-2 flex flex-col gap-10 text-white items-center justify-between text-center font-medium text-lg">
                                         <h2 className={`${raleway.className} font-semibold`}>{service.title}</h2>
                                         <h1 className={`${cormorant.className} text-2xl font-semibold`}>{service.subTitle}</h1>
-                                        <PrimaryButton content={service.buttonContent} destination={service.ButtonDestination} />
+                                        <SecondaryButton content={service.buttonContent} destination={service.ButtonDestination} />
                                     </div>
                                 </div>
                             </div>
@@ -206,7 +208,7 @@ const page = () => {
                     }
                 </div>
             </div>
-
+            <FooterPages subtitle='accommodation' title='Choose your Room'/>
         </div>
     )
 }

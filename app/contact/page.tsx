@@ -11,6 +11,8 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import ContactForm from '@/components/contact/ContactForm'
 import PrimaryButton from '@/components/PrimaryButton'
 import BookingInformation from '@/components/BookingInformation'
+import { Footer } from 'react-day-picker'
+import FooterPages from '@/components/FooterPages'
 
 
 const page = () => {
@@ -47,6 +49,7 @@ const page = () => {
             </div>
             <BookingInformation />
             <ContactForm />
+            <FooterPages subtitle='Reservation' title='Find your room' />
         </div>
     )
 }
