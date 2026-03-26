@@ -2,11 +2,11 @@ import Image from 'next/image'
 import { cormorant, raleway } from '@/app/font'
 import SecondaryButton from './SecondaryButton'
 
-const FooterPages = ({ subtitle, title }: { subtitle: string, title: string }) => {
+const FooterPages = ({ subtitle, title, imageSrc }: { subtitle: string, title: string, imageSrc?:string }) => {
     return (
         <div className='relative h-[60vh] text-white flex flex-col justify-center items-center'>
             <Image
-                src="/assets/suites/SuiteSenior.jpg"
+                src={imageSrc ?? "/assets/suites/SuiteSenior.jpg"}
                 alt="Suite Royal"
                 fill
                 className='object-cover'

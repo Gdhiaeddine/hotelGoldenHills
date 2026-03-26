@@ -30,32 +30,32 @@ const page = () => {
 
     const servicesCard = [
         {
-            image: '/assets/events/meetingRoom2.jpg',
+            image: '/assets/spa/jacuzzi.jpg',
             title: 'Spa',
             subTitle: 'An oasis of peace and relaxation',
             buttonContent: 'Wellness',
-            ButtonDestination: '#'
+            ButtonDestination: '/wellness-spa'
         },
         {
             image: '/assets/rooms/ServiceImage.jpg',
             title: 'Rooms',
             subTitle: 'Comfortable accommodation',
             buttonContent: 'Rooms',
-            ButtonDestination: '#'
+            ButtonDestination: '/accommodation'
         },
         {
             image: '/assets/events/meetingRoom2.jpg',
             title: 'Events',
             subTitle: 'Combining work with and celebrations',
             buttonContent: 'Events',
-            ButtonDestination: '#'
+            ButtonDestination: '/events'
         },
         {
             image: '/assets/events/meetingRoom2.jpg',
             title: 'Gastro',
             subTitle: 'An exceptional gastronomic experience',
             buttonContent: 'Gastro',
-            ButtonDestination: '#'
+            ButtonDestination: '/gastro'
         },
     ]
     const type = "aboutUs"
@@ -80,7 +80,7 @@ const page = () => {
                 <div className="w-full xl:flex-1 lg:max-w-1/2">
                     <div className="relative w-full" style={{ aspectRatio: '4/5' }}>
                         <Image
-                            src='/assets/HotelReception.jpg'
+                            src='/assets/HotelReceptionNew.jpg'
                             alt="Hotel Presentation"
                             fill
                             className="object-cover"
@@ -125,7 +125,7 @@ const page = () => {
                     </div>
                 </div>
             </div>
-            <div className="min-h-screen flex flex-col items-center justify-center">
+            <div className="h-[60vh] flex flex-col items-center justify-center">
                 <h2 className={`${raleway.className} uppercase font-semibold`}>
                     About us
                 </h2>
@@ -155,19 +155,19 @@ const page = () => {
                     We care very much about making you feel comfortable with us, so feedback on our services is very important to us. Thanks to the satisfaction of our guests, the hotel grows and modernizes every year.
                 </h1>
                 <p className={`${raleway.className} font-medium max-w-11/12 xl:max-w-1/2 text-2xl`}>
-                    If our services do not meet your expectations, please contact us, we will do everything to resolve your requirements. Therefore, do not hesitate to contact our staff, who are here for you. We are grateful for our team of employees who have been with us for 15 years and together share our sense of hospitality.
+                    If our services do not meet your expectations, please contact us, we will do everything to resolve your requirements. Therefore, do not hesitate to contact our staff, who are here for you. We are grateful for our team of employees that share our sense of hospitality.
                 </p>
             </div>
             <div className='h-screen flex items-center justify-center max-w-11/12 xl:max-w-3/5 mx-auto'>
                 <div
                     className="relative h-[80vh] w-full"
-                    style={{
-                        backgroundImage: "url('/RoomPresentation.png')",
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundRepeat: 'no-repeat',
-                    }}
                 >
+                    <Image
+                        src='/assets/spa/jacuzzi.jpg'
+                        alt="Hotel Presentation"
+                        fill
+                        className="object-cover"
+                    />
                 </div>
             </div>
             <div className="h-[80vh] flex flex-col items-center justify-center">
@@ -208,7 +208,7 @@ const page = () => {
                     }
                 </div>
             </div>
-            <FooterPages subtitle='accommodation' title='Choose your Room'/>
+            <FooterPages subtitle='accommodation' title='Choose your Room' />
         </div>
     )
 }

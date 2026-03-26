@@ -1,5 +1,6 @@
 import { cormorant, raleway } from '@/app/font'
 import { Calendar, Clock, Mail, Phone } from 'lucide-react'
+import Link from 'next/link'
 import React from 'react'
 
 const BookingInformation = () => {
@@ -15,7 +16,7 @@ const BookingInformation = () => {
                     <p
                         className={`${raleway.className} uppercase font-semibold`}
                     >
-                        Contacts for booking rooms and information
+                        Contacts for booking and information
                     </p>
                 </div>
                 <div className='bg-gray-100 p-4'>
@@ -48,7 +49,7 @@ const BookingInformation = () => {
                                         <p
                                             className={`${raleway.className}`}
                                         >
-                                            +213 564 54 56 44
+                                            +213 770 51 53 59
                                         </p>
                                     </div>
                                 </div>
@@ -72,7 +73,7 @@ const BookingInformation = () => {
                                         <p
                                             className={`${raleway.className}`}
                                         >
-                                            +213 564 54 56 44
+                                            +213 30 79 30 30
                                         </p>
                                     </div>
                                 </div>
@@ -120,9 +121,11 @@ const BookingInformation = () => {
                                     </div>
                                 </div>
                                 <div>
-                                    <div className={`${raleway.className} w-max mb-4 border border-gray-600 px-8 py-1.5 rounded-full text-lg text-gray-600 font-semibold cursor-pointer hover:bg-gray-600 hover:text-white transition-colors`}>
-                                        Book
-                                    </div>
+                                    <Link href='/booking'>
+                                        <div className={`${raleway.className} w-max mb-4 border border-gray-600 px-8 py-1.5 rounded-full text-lg text-gray-600 font-semibold cursor-pointer hover:bg-gray-600 hover:text-white transition-colors`}>
+                                            Book
+                                        </div>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

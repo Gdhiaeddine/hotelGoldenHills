@@ -9,7 +9,7 @@ import EventsHome from "@/components/EventsHome";
 export default function Home() {
   const title = "Golden Hills"
   const subTitle = "Hotel & SPA"
-  const description = "Your favorite place. Make quick booking now."
+  const description = "Experience comfort and elegance at Golden Hills. Reserve your stay now."
   const isForm = true
   const type = "home"
   const HeroSectionImage = "/assets/homeHotel.jpg"

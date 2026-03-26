@@ -12,8 +12,8 @@ const RoomTrigger = () => {
     return (
         <div className="min-h-screen relative flex flex-col justify-center items-center">
             <Image
-                src="/RoomPresentation.png"
-                alt="Room Presentation"
+                src="/assets/suites/SuiteSofa.JPG"
+                alt="Suite Royal"
                 fill
                 className="object-cover object-center"
                 priority
@@ -23,7 +23,7 @@ const RoomTrigger = () => {
             <div className='w-full max-w-xl z-10 flex flex-col gap-2 px-4'>
 
                 {/* Item 1 */}
-                <div className={`transition-all duration-300 ${openIndex === 0 ? 'bg-white text-black' : 'text-white'}`}>
+                <div className={`transition-all duration-300 ${openIndex === 0 ? 'bg-white/80 text-black' : 'text-white'}`}>
                     <div className='flex justify-between items-center p-4 cursor-pointer' onClick={() => toggle(0)}>
                         <h1 className={`${cormorant.className} text-3xl font-semibold`}>To make your stay tasty</h1>
                         <div className={`border rounded-full p-1 transition-transform duration-300 ${openIndex === 0 ? 'rotate-180 border-black' : 'border-white'}`}>
@@ -40,7 +40,7 @@ const RoomTrigger = () => {
                 </div>
 
                 {/* Item 2 */}
-                <div className={`transition-all duration-300 ${openIndex === 1 ? 'bg-white text-black' : 'text-white'}`}>
+                <div className={`transition-all duration-300 ${openIndex === 1 ? 'bg-white/80 text-black' : 'text-white'}`}>
                     <div className='flex justify-between items-center p-4 cursor-pointer' onClick={() => toggle(1)}>
                         <h1 className={`${cormorant.className} text-3xl font-semibold`}>Wellness & Relaxation</h1>
                         <div className={`border rounded-full p-1 transition-transform duration-300 ${openIndex === 1 ? 'rotate-180 border-black' : 'border-white'}`}>
@@ -57,7 +57,7 @@ const RoomTrigger = () => {
                 </div>
 
                 {/* Item 3 */}
-                <div className={`transition-all duration-300 ${openIndex === 2 ? 'bg-white text-black' : 'text-white'}`}>
+                <div className={`transition-all duration-300 ${openIndex === 2 ? 'bg-white/80 text-black' : 'text-white'}`}>
                     <div className='flex justify-between items-center p-4 cursor-pointer' onClick={() => toggle(2)}>
                         <h1 className={`${cormorant.className} text-3xl font-semibold`}>Concierge Services</h1>
                         <div className={`border rounded-full p-1 transition-transform duration-300 ${openIndex === 2 ? 'rotate-180 border-black' : 'border-white'}`}>
@@ -74,7 +74,7 @@ const RoomTrigger = () => {
                 </div>
 
                 {/* Item 4 */}
-                <div className={`transition-all duration-300 ${openIndex === 3 ? 'bg-white text-black' : 'text-white'}`}>
+                <div className={`transition-all duration-300 ${openIndex === 3 ? 'bg-white/80 text-black' : 'text-white'}`}>
                     <div className='flex justify-between items-center p-4 cursor-pointer' onClick={() => toggle(3)}>
                         <h1 className={`${cormorant.className} text-3xl font-semibold`}>Room Amenities</h1>
                         <div className={`border rounded-full p-1 transition-transform duration-300 ${openIndex === 3 ? 'rotate-180 border-black' : 'border-white'}`}>

@@ -33,7 +33,7 @@ const EventsHome = () => {
                                 {eventDescription}
                             </p>
                             <div className='w-max mx-auto'>
-                                <PrimaryButton content='More' destination='#' />
+                                <PrimaryButton content='More' destination='/events' />
                             </div>
                         </div>
                     </div>

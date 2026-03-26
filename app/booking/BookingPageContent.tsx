@@ -87,10 +87,10 @@ const BookingPageContent = () => {
     }
 
 
-
+    const HeroSectionImage = '/assets/RoomFloor.webp'
     return (
         <div>
-            <HeroSection title={title} isForm={isForm} onSearch={handleSearch} />
+            <HeroSection title={title} isForm={isForm} onSearch={handleSearch} HeroSectionImage={HeroSectionImage}/>
 
             <div className='flex justify-center'>
                 <HeaderContent title={HeaderContentTitle} />

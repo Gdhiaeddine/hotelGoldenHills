@@ -5,19 +5,21 @@ import { cormorant, ebGaramond, raleway } from '../font'
 import { ChevronDown } from 'lucide-react'
 import RoomType from '@/components/accommodation/RoomType'
 import RoomTrigger from '@/components/accommodation/RoomTrigger'
+import FooterPages from '@/components/FooterPages'
 
 const page = () => {
 
 
     const title = "Rooms"
     const description = "Comfortable accommodation directly in the hotel with extensive Wellness and exceptional gastronomy."
-    const HeroSectionImage = "/assets/RoomFloor.webp"
+    const HeroSectionImage = "/assets/suites/SuiteSenior.jpg"
 
     return (
         <div>
             <HeroSection title={title} description={description} HeroSectionImage={HeroSectionImage}/>
             <RoomType />
             <RoomTrigger />
+            <FooterPages subtitle='Wellness & Spa' title='Extensive wellness. Thermal spring. Team of therapists.' imageSrc='/assets/spa/jacuzzi.jpg'/>
 
         </div>
     )

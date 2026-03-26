@@ -38,20 +38,22 @@ const Footer = () => {
     return (
         <div className="flex flex-col lg:flex-row h-screen w-full">
             {/* Left Panel - Navigation - 60% */}
-            <div
-                className={`lg:w-[60%] h-full flex justify-start items-center px-16 relative`}
-                style={{
-                    backgroundImage: `url(${footerImage})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                }}
+            <div className="lg:w-[60%] h-full flex justify-start items-center px-16 relative overflow-hidden">
+                <Image
+                    src={footerImage}
+                    alt="Navigation background"
+                    fill
+                    priority
+                    className="object-cover object-center"
+                />
 
-            >
+                {/* Dark overlay */}
                 <div className="absolute inset-0 bg-black/30" />
 
-                <div className='flex flex-col gap-6 z-10'>
+                {/* Nav links */}
+                <div className="flex flex-col gap-6 z-10">
                     {navPages.map((item, index) => (
-                        <Link href={item.url}  key={index}>
+                        <Link href={item.url} key={index}>
                             <h1
                                 className={`${cormorant.className} text-white text-3xl font-bold tracking-widest cursor-pointer hover:text-amber-400 transition-colors duration-300`}
                             >
@@ -60,10 +62,8 @@ const Footer = () => {
                         </Link>
                     ))}
                 </div>
-                <div>
-
-                </div>
             </div>
+
 
             {/* Right Panel - Info - 40% */}
             <div className="lg:w-[40%] h-full bg-[#111] flex flex-col text-center justify-center items-center px-12 gap-10">
@@ -82,8 +82,8 @@ const Footer = () => {
                 </div>
 
                 <div className={`flex flex-col gap-1 text-stone-200 tracking-wide text-lg ${raleway.className}`}>
-                    <h2>+213 77 77 77 77 77</h2>
-                    <h2>+213 77 77 77 77 77</h2>
+                    <h2>+213 770 51 53 59</h2>
+                    <h2>+213 30 79 30 30</h2>
                     <h2>reservationgoldenhills@gmail.com</h2>
                 </div>
             </div>

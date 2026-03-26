@@ -99,20 +99,20 @@ export const rooms = [
         name: "Air conditioning"
       },
     ],
-    price: 14200,
+    price: 14800,
     guests:"Two guests",
     images : [
       {
-        path: '/RoomPresentation.png',
-        alt: 'aaa',
+        path: '/assets/rooms/DeluxeDoubleRoom1.jpg',
+        alt: 'Deluxe Double Room',
       },
       {
-        path: '/RoomPresentation.png',
-        alt: 'aaa',
+        path: '/assets/rooms/DeluxeDoubleRoom2.JPG',
+        alt: 'Deluxe Double Room',
       },
       {
-        path: '/RoomPresentation.png',
-        alt: 'aaa',
+        path: '/assets/rooms/DeluxeDoubleRoom3.JPG',
+        alt: 'Deluxe Double Room',
       },
     ]
   },
@@ -146,20 +146,24 @@ export const rooms = [
         name: "Air conditioning"
       },
     ],
-    price: 14200,
+    price: 14800,
     guests:"Two guests",
     images : [
       {
         path: '/assets/rooms/DoubleDeluxe.jpg',
-        alt: 'Double Deluxe',
+        alt: 'Twin Comfort Room',
       },
       {
-        path: '/RoomPresentation.png',
-        alt: 'aaa',
+        path: '/assets/rooms/DoubleSeparatedBed.JPG',
+        alt: 'Twin Comfort Room',
       },
       {
-        path: '/RoomPresentation.png',
-        alt: 'aaa',
+        path: '/assets/rooms/DoubleSeparatedBed1.JPG',
+        alt: 'Twin Comfort Room',
+      },
+      {
+        path: '/assets/rooms/DoubleSeparatedBed2.JPG',
+        alt: 'Twin Comfort Room',
       },
     ]
   },
