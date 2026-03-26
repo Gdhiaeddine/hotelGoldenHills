@@ -136,8 +136,14 @@ export default function HeroSection({ title, subTitle, description, isForm, type
     return (
         <div
             className=" min-h-screen relative flex flex-col"
-            style={{ backgroundImage: `url('${HeroSectionImage ? HeroSectionImage : "/RoomPresentation.png"}')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
         >
+            <Image
+                src={HeroSectionImage ?? "/RoomPresentation.png"}
+                alt="Hero background"
+                fill
+                priority
+                className="object-cover object-center"
+            />
             <div className="absolute inset-0 bg-black/30" />
             {/* Top Banner - padded top to sit below the absolute nav */}
             <div className="backdrop-blur-sm bg-white/10 border-b border-white/30 relative text-white">

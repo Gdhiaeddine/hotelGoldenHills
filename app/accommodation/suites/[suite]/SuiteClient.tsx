@@ -12,7 +12,7 @@ const SuiteClient = ({ suite }: { suite: Suite }) => {
 
     return (
         <div className='min-h-screen'>
-            <HeroSection title={suite.name} />
+            <HeroSection title={suite.name} HeroSectionImage={suite.images[0].path}/>
             <div className='min-h-screen flex justify-center items-center'>
                 <HeaderContent subtitle='Suites' title='Comfortably furnished renovated apartment with separate bedroom and living room with sofa bed.' />
             </div>

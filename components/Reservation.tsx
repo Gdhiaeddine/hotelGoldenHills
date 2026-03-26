@@ -26,14 +26,21 @@ const formSchema = z.object({
     .string()
     .email("Invalid email address")
     .min(5, "Email must be at least 5 characters.")
-    .max(50, "Email must be at most 50 characters."),
+    .max(50, "Email must be at most 50 characters.")
+    .optional(),
+  note: z
+    .string()
+    .min(5, "Note must be at least 5 characters.")
+    .max(250, "Email must be at most 250 characters.")
+    .optional(),
 })
 
 interface BookingValues extends Step1Data {
-    name?: string;
-    email?: string;
-    phone?: string;
-    totalPrice?: number;
+  name?: string;
+  email?: string;
+  phone?: string;
+  note?: string;
+  totalPrice?: number;
 }
 
 
@@ -67,7 +74,7 @@ export default function HotelBooking({ data, onClose }: {
     setValues({ ...values, ...form.getValues() });
   };
 
-  const confirm = async() => {
+  const confirm = async () => {
 
     if (agreed) setDone(true);
     console.log(values)
@@ -76,6 +83,7 @@ export default function HotelBooking({ data, onClose }: {
       name: values.name,
       email: values.email,
       phone: values.phone,
+      note: values.note,
       checkIn: formatDate(hero.dateRange.from),
       checkOut: formatDate(hero.dateRange.to),
       nights,
@@ -114,6 +122,7 @@ export default function HotelBooking({ data, onClose }: {
       name: "",
       phone: "",
       email: "",
+      note: "",
     },
   })
   return (
@@ -240,6 +249,28 @@ export default function HotelBooking({ data, onClose }: {
                                 id="form-rhf-email"
                                 aria-invalid={fieldState.invalid}
                                 placeholder="john@example.com"
+                                autoComplete="off"
+                                className="w-full box-border bg-white/5 border border-[#d4af35]/70 rounded-xs py-2.75 px-3.5 text-stone-800 placeholder:text-gray-500 text-[14px] outline-none"
+                              />
+                              {fieldState.invalid && (
+                                <FieldError errors={[fieldState.error]} />
+                              )}
+                            </Field>
+                          )}
+                        />
+                        <Controller
+                          name="note"
+                          control={form.control}
+                          render={({ field, fieldState }) => (
+                            <Field data-invalid={fieldState.invalid}>
+                              <FieldLabel htmlFor="form-rhf-note" className={`${ebGaramond.className} text-md text-[#d4af35]/90`}>
+                                Note
+                              </FieldLabel>
+                              <Input
+                                {...field}
+                                id="form-rhf-note"
+                                aria-invalid={fieldState.invalid}
+                                placeholder="Your note here"
                                 autoComplete="off"
                                 className="w-full box-border bg-white/5 border border-[#d4af35]/70 rounded-xs py-2.75 px-3.5 text-stone-800 placeholder:text-gray-500 text-[14px] outline-none"
                               />

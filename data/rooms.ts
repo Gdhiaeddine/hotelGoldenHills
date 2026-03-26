@@ -236,7 +236,7 @@ export const suites = [
     name: "Junior Executive Suite",
     slug: "junior-executive-suite",
     description: "Comfortably furnished room without the possibility of an extra bed with breakfast, unlimited access to thermal pools, Spa & Wellness.",
-    type : "Suite Junior",
+    type : "Four Junior",
     about: [
       "Stylish, comfortable suite renovated in 2022, with separate living area with sofa bed for 1 person or 2 children up to 12 years old. (140 x 200), bedroom with double bed, minibar, tea and coffee making facilities, WIFI, satellite TV, two bathrooms with showers, air conditioning, bathrobe and slippers available in the room.",
       "The rooms are non-smoking.",
@@ -266,17 +266,18 @@ export const suites = [
     guests:"Two guests",
     images : [
       {
-        path: '/RoomPresentation.png',
-        alt: 'aaa',
+        path: '/assets/suites/SuiteJunior3.jpg',
+        alt: 'Junior Executive Suite',
       },
       {
-        path: '/RoomPresentation.png',
-        alt: 'aaa',
+        path: '/assets/suites/SuiteJunior1.jpg',
+        alt: 'Junior Executive Suite',
       },
       {
-        path: '/RoomPresentation.png',
-        alt: 'aaa',
+        path: '/assets/suites/SuiteJunior2.jpg',
+        alt: 'Junior Executive Suite',
       },
+
     ]
   },
   {
@@ -310,19 +311,23 @@ export const suites = [
       },
     ],
     price: 22000,
-    guests:"Two guests",
+    guests:"Five guests",
     images : [
       {
-        path: '/RoomPresentation.png',
-        alt: 'aaa',
+        path: '/assets/suites/SuiteSenior.jpg',
+        alt: 'Suite Senior',
       },
       {
-        path: '/RoomPresentation.png',
-        alt: 'aaa',
+        path: '/assets/suites/SuiteSenior1.jpg',
+        alt: 'Suite Senior',
       },
       {
-        path: '/RoomPresentation.png',
-        alt: 'aaa',
+        path: '/assets/suites/SuiteSenior2.jpg',
+        alt: 'Suite Senior',
+      },
+      {
+        path: '/assets/suites/SuiteSenior3.jpg',
+        alt: 'Suite Senior',
       },
     ]
   },

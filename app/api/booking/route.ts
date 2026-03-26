@@ -10,7 +10,7 @@ export async function POST(req: Request) {
 👤 *Nom:* ${data.name}
 📧 *Email:* ${data.email}
 📞 *Téléphone:* ${data.phone}
-
+📧 *Note:* ${data.note}
 📅 *Arrivée:* ${data.checkIn}
 📅 *Départ:* ${data.checkOut}
 🌙 *Nuits:* ${data.nights}
