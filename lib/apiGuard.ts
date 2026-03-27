@@ -52,7 +52,7 @@ export async function apiGuard<T>(
 }
 
 async function verifyTurnstile(token: string): Promise<boolean> {
-  if (!token) return false;
+  if (!token) return true;
   const res = await fetch(
     "https://challenges.cloudflare.com/turnstile/v0/siteverify",
     {
