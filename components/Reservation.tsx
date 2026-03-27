@@ -23,15 +23,14 @@ const formSchema = z.object({
     .min(9, "Description must be at least 20 characters.")
     .max(15, "Description must be at most 100 characters."),
   email: z
-    .string()
-    .email("Invalid email address")
-    .min(5, "Email must be at least 5 characters.")
-    .max(50, "Email must be at most 50 characters.")
+    .union([z.string().email("Invalid email address"), z.literal("")])
     .optional(),
+
   note: z
-    .string()
-    .min(5, "Note must be at least 5 characters.")
-    .max(250, "Email must be at most 250 characters.")
+    .union([
+      z.string().min(5, "Note must be at least 5 characters.").max(250),
+      z.literal(""),
+    ])
     .optional(),
 })
 
