@@ -74,35 +74,37 @@ export default function HotelBooking({ data, onClose }: {
   };
 
   const confirm = async () => {
-
-    if (agreed) setDone(true);
-    console.log(values)
-    const payload = {
-      typeRoom: hero.roomType,
-      name: values.name,
-      email: values.email,
-      phone: values.phone,
-      note: values.note,
-      checkIn: formatDate(hero.dateRange.from),
-      checkOut: formatDate(hero.dateRange.to),
-      nights,
-      nbRooms: hero.nbRooms,
-      nbPrsn: hero.nbPrsn,
-    };
-
-    try {
-      const res = await fetch('/api/booking', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
-      });
-      if (!res.ok) throw new Error('Failed');
-      setDone(true);
-    } catch (err) {
-      console.error(err);
-    }
-
+  if (!agreed) return;
+  const payload = {
+    typeRoom: hero.roomType,
+    name: values.name,
+    email: values.email,
+    phone: values.phone,
+    note: values.note,
+    checkIn: formatDate(hero.dateRange.from),
+    checkOut: formatDate(hero.dateRange.to),
+    nights,
+    nbRooms: hero.nbRooms,
+    nbPrsn: hero.nbPrsn,
   };
+
+  try {
+    const res = await fetch('/api/booking', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+    if (!res.ok) {
+      const err = await res.json();
+      console.error('Booking error:', err);
+      return; 
+    }
+    setDone(true); 
+  } catch (err) {
+    console.error(err);
+  }
+};
+
 
   const nights =
     hero?.dateRange.from && hero.dateRange.to
