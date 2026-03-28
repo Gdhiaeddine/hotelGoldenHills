@@ -30,7 +30,7 @@ const page = () => {
 
     const servicesCard = [
         {
-            image: '/assets/spa/jacuzzi.jpg',
+            image: '/assets/spa/jacuzzi.JPG',
             title: 'Spa',
             subTitle: 'An oasis of peace and relaxation',
             buttonContent: 'Wellness',
@@ -141,13 +141,14 @@ const page = () => {
             <div className='h-screen flex items-center justify-center max-w-11/12 xl:max-w-3/5 mx-auto'>
                 <div
                     className="relative h-[80vh] w-full"
-                    style={{
-                        backgroundImage: "url('/assets/HotelOutsideNew.jpg')",
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                        backgroundRepeat: 'no-repeat',
-                    }}
                 >
+                    <Image
+                        src='/assets/HotelOutsideNew.jpg'
+                        alt="Hotel outside"
+                        fill
+                        className="object-cover"
+
+                    />
                 </div>
             </div>
             <div className='flex flex-col gap-6 items-center justify-center'>
@@ -163,8 +164,8 @@ const page = () => {
                     className="relative h-[80vh] w-full"
                 >
                     <Image
-                        src='/assets/spa/jacuzzi.jpg'
-                        alt="Hotel Presentation"
+                        src='/assets/spa/jacuzzi.JPG'
+                        alt="jacuzzi"
                         fill
                         className="object-cover"
                     />

@@ -39,7 +39,7 @@ const page = () => {
                     </div>
                     <div>
                         <Image
-                            src='/assets/hotelOutsideNew.jpg'
+                            src='/assets/HotelOutsideNew.jpg'
                             height={500}
                             width={500}
                             alt='hotel Golden Hills'
