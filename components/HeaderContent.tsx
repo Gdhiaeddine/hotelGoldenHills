@@ -7,7 +7,7 @@ import { cormorant, ebGaramond, raleway } from '@/app/font'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const HeaderContent = ({ subtitle, title, description }: { subtitle?: string, title?: string, description?: string }) => {
+const HeaderContent = ({ subtitle, title, description, isLong }: { subtitle?: string, title?: string, description?: string, isLong?: boolean }) => {
     const containerRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
@@ -34,7 +34,7 @@ const HeaderContent = ({ subtitle, title, description }: { subtitle?: string, ti
     }, [])
 
     return (
-        <div ref={containerRef} className='h-[40vh] flex flex-col gap-6 items-center justify-center text-center lg:max-w-2/3'>
+        <div ref={containerRef} className={`h-[40vh] flex flex-col gap-6 items-center justify-center text-center ${isLong ? 'lg:max-w-11/12' : 'lg:max-w-2/3' }`}>
             {subtitle && (
                 <h2 style={{ opacity: 0 }} className={`${raleway.className} uppercase font-semibold`}>
                     {subtitle}

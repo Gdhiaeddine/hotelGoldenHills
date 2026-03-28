@@ -1,7 +1,6 @@
 import HeroSection from '@/components/HeroSection'
 import Image from 'next/image'
 import { cormorant, ebGaramond, raleway } from '../font'
-import PrimaryButton from '@/components/PrimaryButton'
 import SecondaryButton from '@/components/SecondaryButton'
 import FooterPages from '@/components/FooterPages'
 
@@ -62,8 +61,8 @@ const page = () => {
     const HeroSectionImage = '/assets/hotelOutside.jpg'
     return (
         <div>
-            <HeroSection subTitle={subTitle} title={title} type={type} HeroSectionImage={HeroSectionImage} />
-            <div className="w-full lg:max-w-3/5 flex flex-col lg:flex-row justify-between items-center gap-12 px-12 pt-16 pb-4 mx-auto">
+            <HeroSection subTitle={subTitle} title={title} type={type} HeroSectionImage={HeroSectionImage} isButton={true} buttonDestination='#about'/>
+            <div id='about' className="w-full lg:max-w-3/5 flex flex-col lg:flex-row justify-between items-center gap-12 px-12 pt-16 pb-4 mx-auto">
                 {/* Items list — sticks while images scroll */}
                 <div className="flex-1 flex justify-center items-center text-center w-11/12 lg:w-2/3">
                     <div className="py-7 flex flex-col gap-6">

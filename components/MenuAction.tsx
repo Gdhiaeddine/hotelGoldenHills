@@ -2,8 +2,11 @@
 import { raleway } from '@/app/font';
 import { Menu } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react'
+interface MenuActionProps {
+  onClick?: () => void
+}
 
-const MenuAction = () => {
+const MenuAction = ({ onClick }: MenuActionProps) => {
     const [visible, setVisible] = useState(true);
     const [scrolled, setScrolled] = useState(false);
     const lastScrollY = useRef(0);

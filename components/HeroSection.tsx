@@ -16,6 +16,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "./ui/input";
 import { animate, splitText, stagger } from "animejs";
 import { useRouter } from "next/navigation";
+import PrimaryButton from "./PrimaryButton";
+import SecondaryButton from "./SecondaryButton";
 
 const formSchema = z.object({
     totalPrice: z.number().optional(),
@@ -39,13 +41,17 @@ const formSchema = z.object({
 
 export type Step1Data = z.infer<typeof formSchema>;
 
-export default function HeroSection({ title, subTitle, description, isForm, type, HeroSectionImage, onSearch }: {
+export default function HeroSection({ title, subTitle, description, isForm, type, HeroSectionImage, isButton, buttonContent, buttonDestination, onSearch }: {
     title?: string,
     subTitle?: string,
     description?: string
     isForm?: boolean,
     type?: string,
     HeroSectionImage?: string,
+    isButton? : boolean,
+    buttonContent?: string,
+    buttonDestination?: string,
+
     onSearch?: (data: Step1Data) => void
 }) {
 
@@ -337,7 +343,13 @@ export default function HeroSection({ title, subTitle, description, isForm, type
                     }
 
                 </div>
-
+                {
+                    isButton && (
+                        <div>
+                            <SecondaryButton content={buttonContent ?? ""} destination={buttonDestination ?? "#"} />
+                        </div>
+                    )
+                }
             </div>
 
         </div >

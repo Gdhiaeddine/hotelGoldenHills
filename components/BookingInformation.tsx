@@ -44,7 +44,7 @@ const BookingInformation = () => {
                                         <h1
                                             className={`${cormorant.className} font-medium text-3xl w-20`}
                                         >
-                                            Phone
+                                            Mobile
                                         </h1>
                                         <p
                                             className={`${raleway.className}`}
@@ -68,7 +68,7 @@ const BookingInformation = () => {
                                         <h1
                                             className={`${cormorant.className} font-medium text-3xl w-20`}
                                         >
-                                            Mobile
+                                            Phone
                                         </h1>
                                         <p
                                             className={`${raleway.className}`}
