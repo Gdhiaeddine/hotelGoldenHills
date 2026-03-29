@@ -12,13 +12,13 @@ const SuiteClient = ({ suite }: { suite: Suite }) => {
 
     return (
         <div className='min-h-screen'>
-            <HeroSection title={suite.name} HeroSectionImage={suite.images[0].path}/>
+            <HeroSection title={suite.name} HeroSectionImage={suite.images[0].path} />
             <div className='min-h-screen flex justify-center items-center'>
                 <HeaderContent subtitle='Suites' title='Comfortably furnished renovated apartment with separate bedroom and living room with sofa bed.' />
             </div>
-            <div className='flex gap-4 p-4'>
-                <div className='w-1/2'>
-                    <div className='max-w-2/3 mx-auto'>
+            <div className='flex flex-col xl:flex-row gap-4 p-4'>
+                <div className='xl:w-1/2'>
+                    <div className='max-w-11/12 xl:max-w-2/3 mx-auto'>
                         <div className='flex flex-col gap-2 mb-2'>
                             <h1 className={`${cormorant.className} text-2xl font-bold`}>
                                 About accommodation
@@ -69,19 +69,17 @@ const SuiteClient = ({ suite }: { suite: Suite }) => {
             </div>
             <div className='min-h-screen flex flex-col items-center p-4'>
                 <HeaderContent subtitle='Gallery' title={suite.type} />
-                <div className='flex flex-col gap-4'>
-                    {
-                        suite.images.map((image, index) => (
+                <div className="flex flex-col items-center gap-4 w-full">
+                    {suite.images.map((image, index) => (
+                        <div key={index} className="relative w-full h-[40vh] xl:w-3/6 xl:h-[70vh]">
                             <Image
-                                key={index}
                                 src={image.path}
                                 alt={image.alt}
-                                width={500}
-                                height={500}
-                                className='h-[70vh] w-full'
+                                fill
+                                className="object-cover"
                             />
-                        ))
-                    }
+                        </div>
+                    ))}
                 </div>
             </div>
             <BookingInformation />

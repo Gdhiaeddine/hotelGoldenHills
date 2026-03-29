@@ -3,7 +3,7 @@ import HeaderContent from '../HeaderContent'
 
 const RoomType = () => {
     return (
-        <div id='rooms' className='min-h-screen flex flex-col items-center justify-center gap-14 max-w-3/5 mx-auto mt-24'>
+        <div id='rooms' className='min-h-screen flex flex-col items-center justify-center gap-14 max-w-11/12 xl:max-w-3/5 mx-auto mt-40 xl:mt-24 relative'>
 
             <div className='flex justify-center items-center'>
                 <HeaderContent subtitle='Choose' title='Do you prefer accommodation directly in a hotel, with all the services and comforts that belong to it? We offer comfortably furnished rooms and modern suits.' isLong={true}/>

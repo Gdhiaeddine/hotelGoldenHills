@@ -8,14 +8,45 @@ import { User } from 'lucide-react'
 import Image from 'next/image'
 
 const page = () => {
-    const title = '48 comfortable rooms'
+    const title = '36 comfortable rooms'
     const HeaderContentSubTitle = 'Choose'
     const HeaderContentTitle = 'Comfortably furnished smaller accommodation.'
     const SecondHeaderContentTitle = 'Gallery Rooms'
+    const HeroSectionImage = '/assets/rooms/DeluxeDoubleRoom1.JPG'
+    const GalleryImages = [
+        {
+            name: 'DeluxeDoubleRoom',
+            path: '/assets/rooms/DeluxeDoubleRoom1.JPG'
+        },
+        {
+            name: 'DeluxeDoubleRoom',
+            path: '/assets/rooms/DeluxeDoubleRoom2.JPG'
+        },
+        {
+            name: 'DeluxeDoubleRoom',
+            path: '/assets/rooms/DeluxeDoubleRoom3.JPG'
+        },
+        {
+            name: 'DoubleDeluxe',
+            path: '/assets/rooms/DoubleDeluxe.jpg'
+        },
+        {
+            name: 'DoubleSeparatedBed',
+            path: '/assets/rooms/DoubleSeparatedBed.JPG'
+        },
+        {
+            name: 'DoubleSeparatedBed',
+            path: '/assets/rooms/DoubleSeparatedBed1.JPG'
+        },
+        /*{
+            name: 'DoubleSeparatedBed',
+            path: '/assets/rooms/DoubleSeparatedBed2.JPG'
+        },*/
+    ]
     
     return (
         <div>
-            <HeroSection title={title} />
+            <HeroSection title={title} HeroSectionImage={HeroSectionImage}/>
             <div className='flex justify-center'>
                 <HeaderContent subtitle={HeaderContentSubTitle} title={HeaderContentTitle} />
             </div>
@@ -24,7 +55,7 @@ const page = () => {
                     const isEven = index % 2 === 0;
 
                     const imageBlock = (
-                        <div className="flex-1 flex flex-col gap-4 max-w-1/2">
+                        <div className="flex-1 flex flex-col gap-4 xl:max-w-1/2">
                             <div className="relative w-full" style={{ aspectRatio: '4/5' }}>
                                 <Image
                                     src={room.images[0].path}
@@ -43,7 +74,7 @@ const page = () => {
                     );
 
                     const textBlock = (
-                        <div className="flex-1 flex flex-col gap-8 items-center text-center w-1/2">
+                        <div className="flex-1 flex flex-col gap-8 items-center text-center xl:w-1/2">
                             <div className='flex justify-center'>
                                 <User />
                             </div>
@@ -55,7 +86,7 @@ const page = () => {
                     );
 
                     return (
-                        <div key={index} className="w-full max-w-3/5 flex justify-between items-center gap-12 px-12 pt-16 pb-4 mx-auto">
+                        <div key={index} className="w-full xl:max-w-3/5 flex flex-col xl:flex-row justify-between items-center gap-12 px-12 pt-16 pb-4 mx-auto">
                             {isEven ? <>{imageBlock}{textBlock}</> : <>{textBlock}{imageBlock}</>}
                         </div>
                     );
@@ -64,7 +95,7 @@ const page = () => {
             <div className='flex justify-center'>
                 <HeaderContent title={SecondHeaderContentTitle} />
             </div>
-            <Gallery />
+            <Gallery images={GalleryImages}/>
         </div>
     )
 }

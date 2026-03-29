@@ -124,7 +124,7 @@ const page = () => {
                     </div>
                 </div>
             </div>
-            <div className="h-[60vh] flex flex-col items-center justify-center">
+            <div className="h-[60vh] flex flex-col items-center justify-center relative">
                 <h2 className={`${raleway.className} uppercase font-semibold`}>
                     About us
                 </h2>
@@ -183,11 +183,11 @@ const page = () => {
                     </h1>
                 </div>
             </div>
-            <div className="flex justify-center items-center mb-4">
-                <div className='flex flex-col xl:grid grid-cols-2 gap-8'>
+            <div className="flex justify-center items-center mb-4 mt-8 xl:mt-0">
+                <div className='flex flex-col w-11/12 xl:full xl:grid grid-cols-2 gap-8'>
                     {
                         servicesCard.map((service, index) => (
-                            <div key={index} className="relative h-180 w-140 overflow-hidden">
+                            <div key={index} className="relative h-180 w-full xl:w-140 overflow-hidden">
                                 <Image
                                     src={service.image}
                                     alt={service.title}
@@ -208,7 +208,7 @@ const page = () => {
                     }
                 </div>
             </div>
-            <FooterPages subtitle='accommodation' title='Choose your Room' />
+                <FooterPages subtitle='accommodation' title='Choose your Room' />
         </div>
     )
 }

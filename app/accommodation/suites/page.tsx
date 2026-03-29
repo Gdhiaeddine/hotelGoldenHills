@@ -9,14 +9,52 @@ import Image from 'next/image'
 import React from 'react'
 
 const page = () => {
-    const title = '26 spacious suites'
+    const title = '18 spacious suites'
     const HeaderContentSubTitle = 'Choose'
     const HeaderContentTitle = 'Spacious accommodation with stylish furnishings.'
     const SecondHeaderContentTitle = 'Gallery Rooms'
-
+    const HeroSectionImage = '/assets/suites/SuiteSenior3.jpg'
+    const GalleryImages = [
+        {
+            name: 'Suite Senior',
+            path: '/assets/suites/SuiteSenior1.jpg'
+        },
+        {
+            name: 'Suite Senior',
+            path: '/assets/suites/SuiteSenior2.jpg'
+        },
+        {
+            name: 'Suite Senior',
+            path: '/assets/suites/SuiteSenior3.jpg'
+        },
+        {
+            name: 'Suite Senior',
+            path: '/assets/suites/SuiteSenior.jpg'
+        },
+        {
+            name: 'Suite Presentation',
+            path: '/assets/suites/SuitePresentation.jpg'
+        },
+        {
+            name: 'Suite Junior',
+            path: '/assets/suites/SuiteJunior.jpg'
+        },
+        {
+            name: 'Suite Junior',
+            path: '/assets/suites/SuiteJunior1.jpg'
+        },
+        {
+            name: 'Suite Junior',
+            path: '/assets/suites/SuiteJunior2.jpg'
+        },/*
+        {
+            name: 'Suite Junior',
+            path: '/assets/suites/SuiteJunior3.jpg'
+        },*/
+    ]
     return (
         <div>
-            <HeroSection title={title} />
+            <HeroSection title={title} HeroSectionImage={HeroSectionImage}/>
             <div className='flex justify-center'>
                 <HeaderContent subtitle={HeaderContentSubTitle} title={HeaderContentTitle} />
             </div>
@@ -65,7 +103,7 @@ const page = () => {
             <div className='flex justify-center'>
                 <HeaderContent title={SecondHeaderContentTitle} />
             </div>
-            <Gallery />
+            <Gallery images={GalleryImages}/>
         </div>
     )
 }

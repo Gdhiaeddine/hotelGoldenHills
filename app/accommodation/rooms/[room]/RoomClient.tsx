@@ -71,14 +71,14 @@ const RoomClient = ({ room }: { room: Room }) => {
             </div>
             <div className='min-h-screen flex flex-col items-center p-4'>
                 <HeaderContent subtitle='Gallery' title={room.type} />
-                <div className='flex flex-col gap-4'>
+                <div className="flex flex-col items-center gap-4 w-full">
                     {room.images.map((image, index) => (
-                        <div key={index} className="relative h-[70vh] w-[100vh]">
+                        <div key={index} className="relative w-full h-[40vh] xl:w-3/6 xl:h-[70vh]">
                             <Image
                                 src={image.path}
                                 alt={image.alt}
                                 fill
-                                className='object-cover'
+                                className="object-cover"
                             />
                         </div>
                     ))}

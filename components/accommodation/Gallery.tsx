@@ -1,36 +1,16 @@
 import Image from 'next/image'
-import React from 'react'
 
-const Gallery = () => {
-    const images = [
-        {
-            name: 'aaa',
-            path: '/RoomPresentation.png'
-        },
-        {
-            name: 'aaa',
-            path: '/RoomPresentation.png'
-        },
-        {
-            name: 'aaa',
-            path: '/RoomPresentation.png'
-        },
-        {
-            name: 'aaa',
-            path: '/RoomPresentation.png'
-        },
-        {
-            name: 'aaa',
-            path: '/RoomPresentation.png'
-        },
-        {
-            name: 'aaa',
-            path: '/RoomPresentation.png'
-        },
-    ]
+type ImageType = {
+  name: string;
+  path: string;
+};
+
+
+const Gallery = ({ images } : { images?: ImageType[] }) => {
+    
     return (
-        <div className='min-h-screen grid grid-cols-2 gap-4 max-w-3/5 mx-auto justify-center mb-8'>
-            {
+        <div className='min-h-screen flex flex-col xl:grid xl:grid-cols-2 gap-4 max-w-11/12 xl:max-w-3/5 mx-auto justify-center mb-8'>
+            {images && 
                 images.map((image, index) => (
                     <div className="h-80" key={index}>
                         <Image
