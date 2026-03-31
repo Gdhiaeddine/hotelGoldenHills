@@ -9,7 +9,7 @@ import SecondaryButton from './SecondaryButton'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const FooterPages = ({ subtitle, title, imageSrc }: { subtitle: string, title: string, imageSrc?: string }) => {
+const FooterPages = ({ subtitle, title, imageSrc, ButtonDestination }: { subtitle: string, title: string, imageSrc?: string, ButtonDestination?: string }) => {
     const containerRef = useRef<HTMLDivElement>(null)
     const contentRef = useRef<HTMLDivElement>(null)
     const imageRef = useRef<HTMLImageElement>(null)
@@ -73,7 +73,7 @@ const FooterPages = ({ subtitle, title, imageSrc }: { subtitle: string, title: s
                 <h1 className={`${cormorant.className} font-semibold text-5xl max-w-[80vh]`}>
                     {title}
                 </h1>
-                <SecondaryButton content='More' destination='/#' />
+                <SecondaryButton content='More' destination={ButtonDestination ?? '#'} />
             </div>
         </div>
     )

@@ -49,7 +49,7 @@ const page = () => {
             </div>
             <BookingInformation />
             <ContactForm />
-            <FooterPages subtitle='Reservation' title='Find your room' />
+            <FooterPages subtitle='Reservation' title='Find your room' ButtonDestination='/accommodation'/>
         </div>
     )
 }

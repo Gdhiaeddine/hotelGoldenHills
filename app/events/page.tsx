@@ -89,7 +89,7 @@ const page = () => {
             </div>
             <BookingInformation />
             <ContactForm />
-            <FooterPages subtitle='rooms' title='Accommodation options for your guests and business partners in the Golden Hills' />
+            <FooterPages subtitle='rooms' title='Accommodation options for your guests and business partners in the Golden Hills' ButtonDestination="/accommodation"/>
         </div>
     )
 }

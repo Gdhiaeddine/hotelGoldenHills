@@ -97,7 +97,7 @@ const page = () => {
 
             </div>
             <BookingInformation />
-            <FooterPages subtitle='Next' title='Gastronomy in hotel Golden Hills' />
+            <FooterPages subtitle='Next' title='Gastronomy in hotel Golden Hills' ButtonDestination='/gastro'/>
         </div>
     )
 }

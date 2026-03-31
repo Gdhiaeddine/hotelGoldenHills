@@ -20,7 +20,7 @@ const BookingAction = () => {
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
     return (
-        <nav className={`headerNav fixed top-3 right-0 px-4 py-2 z-50 transition-all duration-500 ${visible ? "translate-y-0" : "-translate-y-full"}`}>
+        <nav className={`headerNav fixed top-3 right-0 px-4 py-2 z-20 transition-all duration-500 ${visible ? "translate-y-0" : "-translate-y-full"}`}>
             {/* Right — Réservez */}
             <Link href="/booking">
                 <div className={`flex gap-2 rounded-full p-3 items-center text-white mr-8 transition-all duration-500 cursor-pointer ${scrolled ? "bg-[#0c0a06]/90 backdrop-blur-md shadow-md" : "bg-transparent"}`}>

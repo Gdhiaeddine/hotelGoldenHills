@@ -184,7 +184,7 @@ const page = () => {
                 </div>
             </div>
             <div className="flex justify-center items-center mb-4 mt-8 xl:mt-0">
-                <div className='flex flex-col w-11/12 xl:full xl:grid grid-cols-2 gap-8'>
+                <div className='flex flex-col w-11/12 xl:w-full xl:grid grid-cols-2 xl:max-w-4/5 gap-y-8 xl:justify-items-center'>
                     {
                         servicesCard.map((service, index) => (
                             <div key={index} className="relative h-180 w-full xl:w-140 overflow-hidden">
@@ -208,7 +208,7 @@ const page = () => {
                     }
                 </div>
             </div>
-                <FooterPages subtitle='accommodation' title='Choose your Room' />
+                <FooterPages subtitle='accommodation' title='Choose your Room' ButtonDestination='/accommodation'/>
         </div>
     )
 }

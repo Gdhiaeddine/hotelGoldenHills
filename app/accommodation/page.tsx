@@ -20,7 +20,7 @@ const page = () => {
             <HeroSection title={title} description={description} HeroSectionImage={HeroSectionImage} isButton={isButton} buttonContent={buttonContent} buttonDestination={buttonDestination}/>
             <RoomType />
             <RoomTrigger />
-            <FooterPages subtitle='Wellness & Spa' title='Extensive wellness. Thermal spring. Team of therapists.' imageSrc='/assets/spa/jacuzzi.JPG'/>
+            <FooterPages subtitle='Wellness & Spa' title='Extensive wellness. Thermal spring. Team of therapists.' imageSrc='/assets/spa/jacuzzi.JPG' ButtonDestination='/wellness-spa'/>
 
         </div>
     )
