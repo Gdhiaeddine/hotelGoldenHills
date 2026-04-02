@@ -2,13 +2,15 @@ import HeroSection from '@/components/HeroSection'
 import React from 'react'
 import { cormorant, ebGaramond, raleway } from '../font'
 import Image from 'next/image'
+import FooterPages from '@/components/FooterPages'
 
 const page = () => {
     const title = "Gastronomy"
     const description = "Our team of chefs prepare meals according to traditional recipes using fresh and seasonal ingredients."
+    const HeroSectionImage = '/assets/gastro/gastro2.jpg'
     return (
         <div>
-            <HeroSection title={title} description={description} />
+            <HeroSection title={title} description={description} HeroSectionImage={HeroSectionImage} />
             <div>
                 <div>
                     <div className='h-screen flex flex-col gap-6 items-center justify-center text-center'>
@@ -23,13 +25,12 @@ const page = () => {
                 <div className='h-screen flex items-center justify-center max-w-3/5 mx-auto'>
                     <div
                         className="relative h-[80vh] w-full"
-                        style={{
-                            backgroundImage: "url('/RoomPresentation.png')",
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
-                            backgroundRepeat: 'no-repeat',
-                        }}
                     >
+                        <Image
+                            src={HeroSectionImage}
+                            fill
+                            alt='Restaurant Gastro'
+                        />
                     </div>
                 </div>
                 <div className='flex flex-col gap-6 items-center justify-center'>
@@ -52,13 +53,12 @@ const page = () => {
                     <div className='h-screen flex items-center justify-center max-w-3/5 mx-auto'>
                         <div
                             className="relative h-[80vh] w-full"
-                            style={{
-                                backgroundImage: "url('/RoomPresentation.png')",
-                                backgroundSize: 'cover',
-                                backgroundPosition: 'center',
-                                backgroundRepeat: 'no-repeat',
-                            }}
                         >
+                            <Image
+                                src={HeroSectionImage}
+                                fill
+                                alt='Restaurant Gastro'
+                            />
                         </div>
                     </div>
                 </div>
@@ -71,7 +71,7 @@ const page = () => {
                         {/* Images — scrolls normally */}
                         <div className="flex-1 flex flex-col gap-4">
                             <Image
-                                src='/RoomPresentation.png'
+                                src='/assets/gastro/gastro.jpg'
                                 width={300}
                                 height={400}
                                 alt="gastro"
@@ -79,15 +79,7 @@ const page = () => {
                                 style={{ aspectRatio: '4/5' }}
                             />
                             <Image
-                                src='/RoomPresentation.png'
-                                width={500}
-                                height={600}
-                                alt="gastro"
-                                className="w-full object-cover"
-                                style={{ aspectRatio: '4/5' }}
-                            />
-                            <Image
-                                src='/RoomPresentation.png'
+                                src='/assets/gastro/gastro3.jpg'
                                 width={500}
                                 height={600}
                                 alt="gastro"
@@ -153,13 +145,12 @@ const page = () => {
                     <div className='h-screen flex items-center justify-center max-w-3/5 mx-auto'>
                         <div
                             className="relative h-[80vh] w-full"
-                            style={{
-                                backgroundImage: "url('/RoomPresentation.png')",
-                                backgroundSize: 'cover',
-                                backgroundPosition: 'center',
-                                backgroundRepeat: 'no-repeat',
-                            }}
                         >
+                            <Image
+                                src='/assets/gastro/cafeteria2.jpg'
+                                alt='Cafeteria'
+                                fill
+                            />
                         </div>
                     </div>
                 </div>
@@ -196,36 +187,33 @@ const page = () => {
                         </div>
                         {/* Images — scrolls normally */}
                         <div className="flex-1 flex flex-col gap-4">
-                            <Image
-                                src='/RoomPresentation.png'
-                                width={300}
-                                height={400}
-                                alt="gastro"
-                                className="w-full object-cover"
-                                style={{ aspectRatio: '4/5' }}
-                            />
-                            <Image
-                                src='/RoomPresentation.png'
-                                width={500}
-                                height={600}
-                                alt="gastro"
-                                className="w-full object-cover"
-                                style={{ aspectRatio: '4/5' }}
-                            />
-                            <Image
-                                src='/RoomPresentation.png'
-                                width={500}
-                                height={600}
-                                alt="gastro"
-                                className="w-full object-cover"
-                                style={{ aspectRatio: '4/5' }}
-                            />
+                            <div className="w-full relative" style={{ aspectRatio: '4/5' }}>
+                                <Image
+                                    src="/assets/gastro/cafeteria2.jpg"
+                                    alt="gastro"
+                                    fill
+                                    className="object-cover"
+                                    quality={100} // max quality
+                                    priority // preloads image for better experience
+                                />
+                            </div>
+
+                            <div className="w-full relative" style={{ aspectRatio: '4/5' }}>
+                                <Image
+                                    src="/assets/gastro/cafeteria2.jpg"
+                                    alt="gastro"
+                                    fill
+                                    className="object-cover"
+                                    quality={100}
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
                 {
                     //////////////
                 }
+                {/*}
                 <div className='min-h-screen'>
                     <div className='h-[70vh] flex flex-col gap-6 items-center justify-center text-center'>
                         <h2 className={`${raleway.className} uppercase font-semibold`}>
@@ -253,7 +241,6 @@ const page = () => {
                         Exceptional gastronomy in beautiful spaces
                     </h1>
                     <div className="w-full max-w-3/5 flex justify-between items-start gap-12 px-12 pt-16 pb-4 mx-auto">
-                        {/* Images — scrolls normally */}
                         <div className="flex-1 flex flex-col gap-4">
                             <Image
                                 src='/RoomPresentation.png'
@@ -280,17 +267,8 @@ const page = () => {
                                 style={{ aspectRatio: '4/5' }}
                             />
                         </div>
-                        {/* Items list — sticks while images scroll */}
                         <div className="flex-1 sticky top-0 h-screen flex flex-col justify-center items-center text-center">
                             <div className="py-7 max-w-2/3">
-                                {
-                                    /*
-                                    <div className="flex items-center gap-3 mb-3">
-                                      <span className="block w-7 h-px bg-[#C9A96E]" />
-                                      <span className="text-[11px] tracking-[0.2em] text-[#C9A96E] uppercase">03</span>
-                                    </div>
-                                    */
-                                }
 
                                 <h2 className={`${ebGaramond.className} text-3xl font-normal text-stone-900 mb-2 tracking-wide`}>
                                     Good choice for evening sitting
@@ -306,7 +284,10 @@ const page = () => {
 
                     </div>
                 </div>
+                {*/}
+
             </div>
+            <FooterPages subtitle='Next' title='About hotel Golden Hills' imageSrc='/assets/homeHotel.jpg' ButtonDestination='Hotel'/>
         </div>
     )
 }
