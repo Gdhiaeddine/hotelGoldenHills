@@ -128,3 +128,27 @@
     scroll-behavior: smooth;
   }
 }
+
+
+
+::-webkit-scrollbar {
+  width: 8px;  /* vertical */
+  height: 8px; /* horizontal */
+}
+/* Track (background) */
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 4px;
+}
+
+/* Thumb (the draggable part) */
+::-webkit-scrollbar-thumb {
+  background: #C9A96E; /* your gold color */
+  border-radius: 0px;
+}
+
+/* Thumb on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #e0bc85;
+}
+

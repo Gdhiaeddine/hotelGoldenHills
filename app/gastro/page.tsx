@@ -3,6 +3,8 @@ import React from 'react'
 import { cormorant, ebGaramond, raleway } from '../font'
 import Image from 'next/image'
 import FooterPages from '@/components/FooterPages'
+import PrimaryButton from '@/components/PrimaryButton'
+import HeaderContent from '@/components/HeaderContent'
 
 const page = () => {
     const title = "Gastronomy"
@@ -10,17 +12,10 @@ const page = () => {
     const HeroSectionImage = '/assets/gastro/gastro2.jpg'
     return (
         <div>
-            <HeroSection title={title} description={description} HeroSectionImage={HeroSectionImage} />
-            <div>
-                <div>
-                    <div className='h-screen flex flex-col gap-6 items-center justify-center text-center'>
-                        <h2 className={`${raleway.className} uppercase font-semibold`}>
-                            gastronomic experience
-                        </h2>
-                        <h1 className={`${cormorant.className} font-semibold max-w-1/2 text-5xl`}>
-                            Good food is an inseparable part of perfect relaxation and therefore our team of chefs prepare meals according to traditional recipes using fresh, seasonal ingredients from local producers.
-                        </h1>
-                    </div>
+            <HeroSection title={title} description={description} HeroSectionImage={HeroSectionImage} isButton={true} buttonContent='Explore' buttonDestination='#gastro'/>
+            <div id='gastro'>
+                <div className='h-screen flex items-center justify-center'>
+                    <HeaderContent subtitle='gastronomic experience' title='Good food is an inseparable part of perfect relaxation and therefore our team of chefs prepare meals according to traditional recipes using fresh, seasonal ingredients from local producers.'/>
                 </div>
                 <div className='h-screen flex items-center justify-center max-w-3/5 mx-auto'>
                     <div
@@ -126,9 +121,8 @@ const page = () => {
                                     Come and taste meals from national and international cuisines that are prepared by our chef from fresh, seasonal ingredients from local producers, growers and breeders.
                                 </p>
                             </div>
-                            <div className="mb-4 border border-gray-600 px-4 py-1.5 rounded-full text-lg text-gray-600 font-medium cursor-pointer hover:bg-gray-600 hover:text-white transition-colors">
-                                Gastronomy
-                            </div>
+                            <PrimaryButton content='Gastronomy' destination='/gastro/restaurant' />
+
                         </div>
                     </div>
                 </div>
@@ -181,9 +175,7 @@ const page = () => {
                                     Come and relax in our lobby bar, where we prepare for you delicious coffee of highest quality, tasty drinks and in addition, we have a daily delicious cakes baked only for you.
                                 </p>
                             </div>
-                            <div className="mb-4 border border-gray-600 px-8 py-1.5 rounded-full text-lg text-gray-600 font-medium cursor-pointer hover:bg-gray-600 hover:text-white transition-colors">
-                                More
-                            </div>
+                            <PrimaryButton content='More' destination='/gastro/cafeteria' />
                         </div>
                         {/* Images — scrolls normally */}
                         <div className="flex-1 flex flex-col gap-4">
@@ -287,7 +279,7 @@ const page = () => {
                 {*/}
 
             </div>
-            <FooterPages subtitle='Next' title='About hotel Golden Hills' imageSrc='/assets/homeHotel.jpg' ButtonDestination='Hotel'/>
+            <FooterPages subtitle='Next' title='About hotel Golden Hills' imageSrc='/assets/homeHotel.jpg' ButtonDestination='Hotel' />
         </div>
     )
 }

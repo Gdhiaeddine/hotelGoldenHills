@@ -24,8 +24,8 @@ const Gastronomy = () => {
 
     const images = [
         {
-            path: '/assets/gastro/cafeteria1.jpg',
-            alt: 'Cafeteria',
+            path: '/assets/gastro/gastro2.jpg',
+            alt: 'Restaurant',
         },
         {
             path: '/assets/gastro/cafeteria2.jpg',
@@ -42,15 +42,15 @@ const Gastronomy = () => {
                 {/* Images — scrolls normally */}
                 <div className="flex-1 flex flex-col gap-4">
                     {images.map((image, index) => (
-                        <Image
-                            key={index}
-                            src={image.path}
-                            width={500}
-                            height={600}
-                            alt={image.alt}
-                            className="w-full object-cover"
-                            style={{ aspectRatio: '4/5' }}
-                        />
+                        <div className="relative w-full" style={{ aspectRatio: '4/5' }}
+                                    key={index}>
+                            <Image
+                                src={image.path}
+                                fill
+                                alt={image.alt}
+                                className="w-full object-cover"
+                            />
+                        </div>
                     ))
                     }
                 </div>

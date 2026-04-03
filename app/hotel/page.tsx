@@ -116,7 +116,6 @@ const page = () => {
                                         fill
                                         alt={featureImage.alt}
                                         className="object-cover"
-                                        style={{ aspectRatio: '4/5' }}
                                     />
                                 </div>
                             ))
