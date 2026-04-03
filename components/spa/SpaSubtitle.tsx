@@ -6,7 +6,7 @@ import { cormorant, raleway } from '@/app/font'
 
 gsap.registerPlugin(ScrollTrigger)
 
-const SpaSubtitle = ({ subtitle, title, size = 'text-7xl' }: { subtitle: string, title: string, size?: string }) => {
+const SpaSubtitle = ({ subtitle, title, size = 'text-4xl xl:text-7xl' }: { subtitle: string, title: string, size?: string }) => {
     const containerRef = useRef<HTMLDivElement>(null)
 
     useEffect(() => {
@@ -28,9 +28,9 @@ const SpaSubtitle = ({ subtitle, title, size = 'text-7xl' }: { subtitle: string,
     }, [])
 
     return (
-        <div ref={containerRef} className='h-[40vh] flex flex-col gap-6 items-center justify-center text-center'>
+        <div ref={containerRef} className='min-h-[40vh] flex flex-col gap-6 items-center justify-center text-center'>
             <h2 style={{ opacity: 0 }} className={`${raleway.className} uppercase font-semibold`}>{subtitle}</h2>
-            <h1 style={{ opacity: 0 }} className={`${cormorant.className} font-semibold max-w-2/4 ${size}`}>{title}</h1>
+            <h1 style={{ opacity: 0 }} className={`${cormorant.className} font-semibold xl:max-w-3/4 ${size}`}>{title}</h1>
         </div>
     )
 }

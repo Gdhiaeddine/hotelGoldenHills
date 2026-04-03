@@ -23,8 +23,8 @@ const page = () => {
     return (
         <div>
             <HeroSection title={title} description={description} HeroSectionImage={HeroSectionImage}/>
-            <div className='h-[70vh] flex justify-center items-center'>
-                <div className='max-w-full flex items-center gap-10'>
+            <div className='min-h-[70vh] flex justify-center items-center'>
+                <div className='max-w-full flex flex-col lg:flex-row items-center gap-10'>
                     <div className='flex flex-col items-center gap-6 text-center'>
                         <h2 className={`${raleway.className} uppercase font-semibold`}>Address</h2>
                         <div>

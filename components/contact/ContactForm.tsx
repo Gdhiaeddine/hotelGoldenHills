@@ -43,8 +43,8 @@ const ContactForm = () => {
     }
 
     return (
-        <div className='h-[80vh] flex justify-center items-center'>
-            <div className='w-3/6 border p-8'>
+        <div className='min-h-[80vh] flex justify-center items-center'>
+            <div className='w-11/12 xl:w-3/6 border p-8'>
                 <div className="header mb-4 flex flex-col gap-4 justify-center items-center">
                     <h1 className={`${cormorant.className} font-semibold text-4xl`}>
                         Contact Form

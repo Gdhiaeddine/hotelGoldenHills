@@ -197,7 +197,7 @@ export default function HeroSection({ title, subTitle, description, isForm, type
                 }
                 {
                     title && (
-                        <h1 className={`${cormorant.className}  ${type === "aboutUs" ? "text-6xl" : "md:text-8xl text-6xl"} lg:max-w-2/3 tracking-wide font-bold capitalize ${type === "home" ? "text-amber-300" : "text-white"}`}
+                        <h1 className={`${cormorant.className}  ${type === "aboutUs" ? "text-4xl" : "md:text-8xl text-6xl"} lg:max-w-2/3 tracking-wide font-bold capitalize ${type === "home" ? "text-amber-300" : "text-white"}`}
                             ref={h1Ref}
                         >
                             {title}
@@ -206,7 +206,7 @@ export default function HeroSection({ title, subTitle, description, isForm, type
                 }
                 {
                     description && (
-                        <p className={`${raleway.className} text-white tracking-wider text-xl mt-2 mb-10 lg:max-w-2/6`}>
+                        <p className={`${raleway.className} text-white tracking-wider ${type === "aboutUs" ? "text-sm" : "text-xl"}  mt-2 mb-10 lg:max-w-2/6`}>
                             {description}
                         </p>
                     )

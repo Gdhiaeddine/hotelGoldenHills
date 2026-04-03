@@ -7,7 +7,7 @@ const BookingInformation = () => {
     return (
         <div id='contactInformation' className='min-h-[70vh] flex justify-center items-center'>
             <div className='w-11/12 xl:w-3/6 border p-2 xl:p-8'>
-                <div className="header mb-4 flex flex-col xl:flex-row justify-between items-center">
+                <div className="header mb-4 flex flex-col :flex-row justify-between items-center">
                     <div>
                         <h1
                             className={`${cormorant.className} font-semibold text-4xl`}
@@ -20,7 +20,7 @@ const BookingInformation = () => {
                     </p>
                 </div>
                 <div className='bg-gray-100 p-4'>
-                    <div className="subHeader mb-4 flex flex-col xl:flex-row justify-between items-center xl:max-w-6/7 mx-auto">
+                    <div className="subHeader mb-4 flex flex-col md:flex-row justify-between items-center md:max-w-6/7 mx-auto">
                         <div className='flex gap-4 items-center'>
                             <Clock size={20} />
                             <h1
@@ -37,10 +37,10 @@ const BookingInformation = () => {
                     </div>
                     <div className='bg-white p-4 flex flex-col gap-4'>
                         <div>
-                            <div className='flex flex-col xl:flex-row justify-between items-center gap-2'>
-                                <div className='flex flex-col xl:flex-row  items-center gap-2 xl:gap-8'>
+                            <div className='flex flex-col md:flex-row justify-between items-center gap-2'>
+                                <div className='flex flex-col md:flex-row  items-center gap-2 xl:gap-8'>
                                     <Phone size={20} />
-                                    <div className='flex flex-col xl:flex-row items-center gap-2 xl:gap-8'>
+                                    <div className='flex flex-col md:flex-row items-center gap-2 xl:gap-8'>
                                         <h1
                                             className={`${cormorant.className} font-medium text-3xl w-20`}
                                         >
@@ -61,10 +61,10 @@ const BookingInformation = () => {
                             </div>
                         </div>
                         <div>
-                            <div className='flex flex-col xl:flex-row justify-between items-center gap-2'>
-                                <div className='flex flex-col xl:flex-row items-center gap-2 xl:gap-8'>
+                            <div className='flex flex-col md:flex-row justify-between items-center gap-2'>
+                                <div className='flex flex-col md:flex-row items-center gap-2 md:gap-8'>
                                     <Phone size={20} />
-                                    <div className='flex flex-col xl:flex-row items-center gap-2 xl:gap-8'>
+                                    <div className='flex flex-col md:flex-row items-center gap-2 md:gap-8'>
                                         <h1
                                             className={`${cormorant.className} font-medium text-3xl w-20`}
                                         >
@@ -85,10 +85,10 @@ const BookingInformation = () => {
                             </div>
                         </div>
                         <div>
-                            <div className='flex flex-col xl:flex-row justify-between items-center gap-2'>
-                                <div className='flex flex-col xl:flex-row items-center gap-2 xl:gap-8'>
+                            <div className='flex flex-col md:flex-row justify-between items-center gap-2'>
+                                <div className='flex flex-col md:flex-row items-center gap-2 md:gap-8'>
                                     <Mail size={20} />
-                                    <div className='flex flex-col xl:flex-row items-center gap-2 xl:gap-8'>
+                                    <div className='flex flex-col md:flex-row items-center gap-2 md:gap-8'>
                                         <h1
                                             className={`${cormorant.className} font-medium text-3xl w-20`}
                                         >
@@ -109,10 +109,10 @@ const BookingInformation = () => {
                             </div>
                         </div>
                         <div>
-                            <div className='flex flex-col xl:flex-row justify-between gap-2 items-center'>
-                                <div className='flex flex-col xl:flex-row items-center gap-2 xl:gap-8'>
+                            <div className='flex flex-col md:flex-row justify-between gap-2 items-center'>
+                                <div className='flex flex-col md:flex-row items-center gap-2 md:gap-8'>
                                     <Calendar size={20} />
-                                    <div className='flex flex-col xl:flex-row items-center gap-2 xl:gap-8'>
+                                    <div className='flex flex-col md:flex-row items-center gap-2 md:gap-8'>
                                         <h1
                                             className={`${cormorant.className} font-medium text-3xl`}
                                         >

@@ -30,8 +30,8 @@ const SuiteCard = ({ room, nights, rooms, data }: SuiteCardProps) => {
     }
     return (
         <div className='bg-[#0c0a06] rounded-xl overflow-hidden w-3/5' style={{ border: '1px solid rgba(201,169,110,0.2)' }}>
-            <div className='flex'>
-                <div className='relative h-75 w-100 shrink-0'>
+            <div className='flex flex-col xl:flex-row'>
+                <div className='relative h-75 w-full xl:w-100 shrink-0'>
                     <Image
                         src={room.images[0].path}
                         alt={room.images[0].alt}
@@ -40,7 +40,7 @@ const SuiteCard = ({ room, nights, rooms, data }: SuiteCardProps) => {
                     />
                 </div>
                 <div className='flex flex-col gap-4 p-8 w-full'>
-                    <div className='flex gap-4 items-center justify-between'>
+                    <div className='flex flex-col md:flex-row gap-4 md:items-center justify-between'>
                         <h1 className={`${cormorant.className} text-2xl font-bold text-[#F5EDD6]`}>
                             {room.name}
                         </h1>
@@ -50,7 +50,7 @@ const SuiteCard = ({ room, nights, rooms, data }: SuiteCardProps) => {
                             </p>
                         </Link>
                     </div>
-                    <div className='flex justify-between'>
+                    <div className='flex flex-col md:flex-row gap-2 justify-between'>
                         <div>
                             <h1 className={`${cormorant.className} text-xl font-semibold text-[#F5EDD6]/70`}>Tarif flexible</h1>
                         </div>
@@ -62,7 +62,7 @@ const SuiteCard = ({ room, nights, rooms, data }: SuiteCardProps) => {
                             <p>par nuit</p>
                             <p>{totalPrice.toLocaleString('fr-DZ')} Total par chambre</p>
                         </div>
-                        <div className='capitalize text-[#0c0a06] bg-[#C9A96E] rounded-full flex items-center px-8 py-2 max-h-max my-auto cursor-pointer'
+                        <div className='w-max capitalize text-[#0c0a06] bg-[#C9A96E] rounded-full flex items-center px-8 py-2 max-h-max my-auto cursor-pointer'
                             onClick={() => setOpenForm(true)}>
                             <h1 className={`${raleway.className} text-sm font-semibold`}>
                                 Book

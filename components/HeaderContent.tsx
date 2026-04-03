@@ -34,14 +34,14 @@ const HeaderContent = ({ subtitle, title, description, isLong }: { subtitle?: st
     }, [])
 
     return (
-        <div ref={containerRef} className={`h-[40vh] flex flex-col gap-6 items-center justify-center text-center ${isLong ? 'lg:max-w-11/12' : 'lg:max-w-2/3' }`}>
+        <div ref={containerRef} className={`max-w-11/12 min-h-[20vh] lg:min-h-[40vh] flex flex-col gap-6 items-center justify-center text-center ${isLong ? 'lg:max-w-11/12' : 'lg:max-w-2/3' }`}>
             {subtitle && (
                 <h2 style={{ opacity: 0 }} className={`${raleway.className} uppercase font-semibold`}>
                     {subtitle}
                 </h2>
             )}
             {title && (
-                <h1 style={{ opacity: 0 }} className={`${cormorant.className} font-semibold text-5xl`}>
+                <h1 style={{ opacity: 0 }} className={`${cormorant.className} text-2xl font-semibold lg:text-5xl`}>
                     {title}
                 </h1>
             )}

@@ -28,12 +28,12 @@ const SpaIntro = () => {
     }, [])
 
     return (
-        <div ref={containerRef} className='h-screen flex flex-col gap-6 items-center justify-center text-center'>
+        <div ref={containerRef} className='min-h-screen flex flex-col gap-6 items-center justify-center text-center'>
             <h2 style={{ opacity: 0 }} className={`${raleway.className} uppercase font-semibold`}>explore</h2>
-            <h1 style={{ opacity: 0 }} className={`${cormorant.className} font-semibold max-w-1/2 text-5xl`}>
+            <h1 style={{ opacity: 0 }} className={`${cormorant.className} font-semibold max-w-11/12 text-3xl lg:max-w-1/2 lg:text-5xl`}>
                 Far from the everyday life, hustle and trouble, we create magical moments of peace and relaxation.
             </h1>
-            <p style={{ opacity: 0 }} className={`${ebGaramond.className} font-medium max-w-1/4`}>
+            <p style={{ opacity: 0 }} className={`${ebGaramond.className} font-medium max-w-11/12 lg:max-w-1/4 lg:text-xl`}>
                 We take care of your body, stimulate your senses and relax your mind. Due to its unique exceptional thermal springs, rich sources of mineral water with beneficial effects on health, especially muscle and joint regeneration, our Wellness & Spa has become synonymous of relaxation and well-being.
             </p>
         </div>

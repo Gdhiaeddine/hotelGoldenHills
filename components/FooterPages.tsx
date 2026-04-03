@@ -73,7 +73,7 @@ const FooterPages = ({ subtitle, title, imageSrc, ButtonDestination, buttonConte
                         {subtitle}
                     </h2>
                 }
-                <h1 className={`${cormorant.className} font-semibold text-5xl max-w-[80vh]`}>
+                <h1 className={`${cormorant.className} font-semibold text-2xl md:text-5xl max-w-[80vh]`}>
                     {title}
                 </h1>
                 {

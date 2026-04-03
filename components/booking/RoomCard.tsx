@@ -31,8 +31,8 @@ const RoomCard = ({ room, nights, rooms, data }: RoomCardProps) => {
     }
     return (
         <div className='bg-gray-100 rounded-xl overflow-hidden w-3/5'>
-            <div className='flex'>
-                <div className='relative h-75 w-100 shrink-0'>
+            <div className='flex flex-col xl:flex-row'>
+                <div className='relative h-75 w-full xl:w-100 shrink-0'>
                     <Image
                         src={room.images[0].path}
                         alt={room.images[0].alt}
@@ -41,7 +41,7 @@ const RoomCard = ({ room, nights, rooms, data }: RoomCardProps) => {
                     />
                 </div>
                 <div className='flex flex-col gap-4 p-8 w-full'>
-                    <div className='flex gap-4 items-center justify-between'>
+                    <div className='flex flex-col md:flex-row gap-4 md:items-center justify-between'>
                         <h1 className={`${cormorant.className} text-2xl font-bold`}>
                             {room.name}
                         </h1>
@@ -51,7 +51,7 @@ const RoomCard = ({ room, nights, rooms, data }: RoomCardProps) => {
                             </p>
                         </Link>
                     </div>
-                    <div className='flex justify-between'>
+                    <div className='flex flex-col gap-2 md:flex-row justify-between'>
                         <div>
                             <h1 className={`${cormorant.className} text-xl font-semibold`}>Tarif flexible</h1>
                         </div>
@@ -66,7 +66,7 @@ const RoomCard = ({ room, nights, rooms, data }: RoomCardProps) => {
                                 {totalPrice.toLocaleString('fr-DZ')} Total par chambre
                             </p>
                         </div>
-                        <div className='capitalize text-white bg-[#0c0a06]/90 rounded-full flex items-center px-8 py-2 max-h-max my-auto cursor-pointer' onClick={() => { setOpenForm(true); console.log(step1Data)}}>
+                        <div className='capitalize w-max text-white bg-[#0c0a06]/90 rounded-full flex items-center px-8 py-2 max-h-max my-auto cursor-pointer' onClick={() => { setOpenForm(true); console.log(step1Data)}}>
                             <h1 className={`${raleway.className} text-sm font-semibold `}>
                                 Book
                             </h1>
