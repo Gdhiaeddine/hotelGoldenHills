@@ -20,10 +20,10 @@ const Footer = ({ fromMenu, onClose }: FooterProps) => {
   ]
 
   return (
-    <div className="flex flex-col lg:flex-row h-screen w-full">
+    <div className="flex flex-col lg:flex-row lg:h-screen w-full">
       {/* Left Panel - Navigation */}
       <div
-        className={`${!fromMenu ? 'lg:w-[60%]' : 'w-full'} h-full flex justify-start items-center px-16 relative overflow-hidden`}
+        className='lg:w-[60%] h-full flex justify-start items-center px-16 relative overflow-hidden'
       >
         <Image
           src={footerImage}
@@ -36,18 +36,8 @@ const Footer = ({ fromMenu, onClose }: FooterProps) => {
         {/* Dark overlay */}
         <div className="absolute inset-0 bg-black/60" />
 
-        {/* Bouton fermer — uniquement depuis le menu */}
-        {fromMenu && onClose && (
-          <button
-            onClick={onClose}
-            className={`${raleway.className} absolute top-8 right-10 z-20 text-white/60 hover:text-amber-400 transition-colors duration-300 tracking-widest uppercase text-sm flex items-center gap-2`}
-          >
-            Close <span className="text-lg">✕</span>
-          </button>
-        )}
-
         {/* Nav links */}
-        <div className="flex flex-col gap-6 z-10">
+        <div className="flex flex-col gap-6 z-10 p-6">
           {navPages.map((item, index) => (
             <Link href={item.url} key={index} onClick={fromMenu ? onClose : undefined}>
               <h1
@@ -61,8 +51,7 @@ const Footer = ({ fromMenu, onClose }: FooterProps) => {
       </div>
 
       {/* Right Panel — masqué depuis le menu */}
-      {!fromMenu && (
-        <div className="lg:w-[40%] h-full bg-[#111] flex flex-col text-center justify-center items-center px-12 gap-10">
+        <div className="lg:w-[40%] py-6 lg:h-full h-full bg-[#111] flex flex-col text-center justify-center items-center px-12 gap-10">
           <Image
             src='/assets/logo.png'
             height={200}
@@ -79,7 +68,6 @@ const Footer = ({ fromMenu, onClose }: FooterProps) => {
             <h2>reservationgoldenhills@gmail.com</h2>
           </div>
         </div>
-      )}
     </div>
   )
 }
